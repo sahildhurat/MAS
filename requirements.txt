@@ -1,0 +1,13 @@
+fastapi>=0.115,<0.116
+uvicorn>=0.30,<0.31
+langchain>=0.3,<0.4
+langgraph>=0.4,<0.5
+langchain-groq>=0.3,<0.4
+langchain-google-genai>=2.0.0,<5.0
+pydantic>=2.10,<3.0
+pydantic-settings>=2.0,<3.0
+httpx>=0.28,<0.29
+python-dotenv>=1.1,<2.0
+beautifulsoup4>=4.12,<5.0
+structlog>=24.1,<25.0
+sse-starlette>=0.10,<0.12

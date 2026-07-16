@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Atlantis The Palm",
+    "description": "Luxury resort on the Palm.",
+    "address": "Palm Jumeirah",
+    "price_range": "Splurge",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai",
+    "_source": "Wikivoyage Dubai",
+    "stars": 5,
+    "budget_tier": "luxury",
+    "neighborhood": "Palm Jumeirah",
+    "phone": "+971 4 426 2000"
+  }
+]

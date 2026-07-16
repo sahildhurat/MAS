@@ -1,0 +1,452 @@
+[
+  {
+    "name": "Filakia, Petit Café d'Athènes",
+    "description": "",
+    "address": "9 Rue Mandar",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "L'Express Bar",
+    "description": "",
+    "address": "23 Rue du Roule",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Yi Ping",
+    "description": "",
+    "address": "42 Rue Sainte-Anne",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Hokkaido",
+    "description": "Japanese cuisine",
+    "address": "14 Rue Chabanais",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Restaurant KOSS",
+    "description": "",
+    "address": "19 Rue Godot de Mauroy",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Pizza Nelly.",
+    "description": "",
+    "address": "19 Rue Duphot",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Lou pasta",
+    "description": "Italian cuisine",
+    "address": "49 Pass. Choiseul",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Little Seoul Restaurant",
+    "description": "",
+    "address": "19 Pass. Choiseul",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Lemoni Café",
+    "description": "Small plates, also for take-away.",
+    "address": "5, rue Hérold",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Chez Denise",
+    "description": "Small, owner-operated bistro with traditional French country food in a nearly rustic setting. As such it's not exactly veggie-friendly.",
+    "address": "5, rue Prouvaires",
+    "price_range": "Starters from €10-12, main courses €18-25, plus wine",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "À la Cloche des Halles",
+    "description": "The bell no longer rings, but the brasserie-restaurant still has the flair from the old little bars from the good old times named \"troquets\".",
+    "address": "28 Rue Coquillière",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "La Robe et le Palais",
+    "description": "Small restaurant serving mostly tasty Basque food. Fantastic choice of wines.",
+    "address": "13, rue des Lavandieres Sainte Opportune",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Café Marly",
+    "description": "Part of theGrand Louvreredevelopment. Café Marly was opened in 1994 and is on the balcony on the northern terrace of the Cour Napoléon. Patrons can enjoy direct views of the Louvre Pyramid while sitting back in comfortable chairs, watching tourists stroll by.",
+    "address": "93, rue de Rivoli / cour Napoléon du Louvre",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Macéo",
+    "description": "What was once just a great wine bar with decent food has become a must-visit restaurant with the addition of star chef Thierry Bourbonnais. Second-empire atmosphere with fantastic food.",
+    "address": "15, rue des Petits Champs",
+    "price_range": "Starters €13-18 and main courses are €25-28. Vegetarian menu around €30.",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Mystery Cuisine",
+    "description": "The restaurant serves fusion cuisine inspired by French Vietnamese meals in an atmosphere perfect for couples.",
+    "address": "37, rue de Montpensier",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Bar Hemingway",
+    "description": "Hemingway tried to drink here once per week even before he made it big. In August 1944 Hemingway made a booze-powered drive into Parisaheadof the advancing Free French 2nd Tank Division to \"liberate the Ritz\", and specifically the bar which was shortly thereafter renamed in his honour. Today the bar is considered by many to be one of the best bars in the world, in no small part due to the bar-tending skills of Colin Field, who creates elaborate cocktails as a fine art, and with the rest of the staff is skilled at bringing his guests together in conversation.",
+    "address": "15 Place Vendôme",
+    "price_range": "Expect to pay €30 or more per drink",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Café Oz",
+    "description": "You probably didn't think you were coming to Paris to sample Australian culture, but if after a long day of strolling from one end of the city to another you would just like to let go a bit and meet up with some fellow anglophones then you could do a lot worse than this almost legendarily hard-partying Aussie joint (ask the neighbours). Warning: as with other Aussie places in Paris for some reason, weekend nights here tend to bring out hoards of young single Frenchmen looking to chat up some (any) visiting sheilas. This has been known to lead to, um, confrontations. ~€7 pints.",
+    "address": "18, rue Saint Denis",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Juvénile's",
+    "description": "The bistro serves many different wines from around the world and tapas. You can buy a bottle to take home if you like it.",
+    "address": "47, rue Richelieu",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Willi's Wine Bar",
+    "description": "It's actually a restaurant and is more upscale than Juvéniles, serving good food and good-to-great bottles of wine with a focus on the Rhône Valley, but including many from Burgundy, the Loire, as well as Italians, and \"Atlantic crossing\" Californians. The dinner menu by chef François Yon Great won the \"Bib Gourmet 2009\" award, and there are cheeses & desserts (yummy crumble) for after. Reservations recommended.",
+    "address": "13, rue des Petits Champs",
+    "price_range": "€20.50-35",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Blend Hamburger",
+    "description": "French meat with home made ketchup.",
+    "address": "44, rue d'Argout",
+    "price_range": "€15 lunch menu, €10 burger",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/2nd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "2nd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Le Bougainville",
+    "description": "This comfy little bar offers home cooking from theAuvergneregion, and after-work drinks for the financial set.",
+    "address": "5, rue de la Banque",
+    "price_range": "Sandwiches, €3; plates €12-15",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/2nd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "2nd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Grillé",
+    "description": "A fast food restaurant that makes a \"healthy\" version of kebab (good herbs, better salad). Three cooks, Marie Carcassonne, Hugo Desnoyer, and Frédéric Peneau worked on this creation.",
+    "address": "15, rue Saint-Augustin",
+    "price_range": "€8 kebab, €10 formule",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/2nd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "2nd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Rani Mahal",
+    "description": "This Indian restaurant is raved about by vegetarians. It serves meat as well.",
+    "address": "9, rue Saint-Augustin",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/2nd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "2nd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Café Etienne Marcel",
+    "description": "A Costes brothers creation but with lower prices than many of their other restaurants. The Etienne Marcel combines a creative menu with hip interior design and hip musical ambiance.Vegetarians:The crispy risotto balls (risotto croustillant) are amazing, and pretty much impossible to make at home.",
+    "address": "34, rue Etienne Marcel",
+    "price_range": "€15-20",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/2nd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "2nd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Le Tambour",
+    "description": "The really distinguishing feature of the Tambour is its very late hours.",
+    "address": "41, rue Montmartre",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/2nd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "2nd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Drouant",
+    "description": "Anthony Clémot runs this French kitchen.",
+    "address": "16-18, place Gaillon",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/2nd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "2nd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Café Noir",
+    "description": "A particularly fine example of a Paris café.",
+    "address": "65, rue Montmartre",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/2nd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "2nd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "La Cantine",
+    "description": "A technology focused café and co-working space.",
+    "address": "151, rue Montmartre",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/2nd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "2nd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "The Frog & Rosbif",
+    "description": "As you probably know the English use the word \"frog\" as an ethnic slur for the French. You may not know that the word \"rosbif\" is a French ethnic slur for the English. Well, it seems that there are mostly no hard feelings over a pint, or so the presence of this chain of 6 English pubs in the French capital would tend to suggest.",
+    "address": "116, rue St Denis",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/2nd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "2nd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "[dead link]Harry's New York Bar",
+    "description": "Legend has it that Harry's New York Bar was the birthplace of the Bloody Mary invented by Fernand \"Pete\" Petiot, an American bartender, and was another Hemingway hangout.",
+    "address": "5, rue Daunou",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/2nd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "2nd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Camille",
+    "description": "Fantastic fresh French food. It is worth the wait.",
+    "address": "24, rue des Francs-Bourgeois",
+    "price_range": "€40",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/3rd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "3rd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Chez Janou",
+    "description": "Chez Janou has such a pretty location that it's worth an evening visit just for that. But the food and atmosphere are also amazing.  Vegetarians be warned, the tortellini isnotthe token veggie dish; there isn't one.",
+    "address": "2, Rue Roger Verlhomme",
+    "price_range": "€18",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/3rd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "3rd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Page 35",
+    "description": "The name apparently refers to some section of some newspaper or another apparently with social listings.  Thecartefeatures fantastic crêpe opportunities making this a must for lunch or lingering over acarafeor two of the house wine.",
+    "address": "4, rue du Parc Royal",
+    "price_range": "€8",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/3rd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "3rd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Le Petit Marché",
+    "description": "This is one of those charming little Parisian bistros which is off on its own a little.  The wait staff couldn't possibly be friendlier so this is a good place to bring people to show them how nice Parisian dining can be.  The food is in a higher class than the price range, and the folks who work here have an easy collegial or even familial way with each other, and with frequent guests.",
+    "address": "9, rue de Béarn",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/3rd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "3rd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Le Potager du Marais",
+    "description": "A 100% vegetarian restaurant specialized in re-creating the French country dining experience without any of the meat.",
+    "address": "22 rue Rambuteau",
+    "price_range": "Menus for around€15",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/3rd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "3rd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Andy Wahloo",
+    "description": "Andy Wahloo apparently means \"I don't have anything\" in Arabic. The Moroccan artist who owns this place certainly means it as a play on words having done the decor as a Moorish take on Andy Warhol.",
+    "address": "69 rue des Gravilliers",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/3rd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "3rd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Les Arts et Métiers",
+    "description": "An updated but otherwise standardBrasserie, the draw here is the crowd: young trendy locals love the place.",
+    "address": "51 rue Turbigo",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/3rd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "3rd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "L'Attirail",
+    "description": "Cool bar/club with concerts ranging fromJazz Manoucheto contemporary swing.",
+    "address": "9, rue du Maire",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/3rd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "3rd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Café des Musées",
+    "description": "A bog standard and absolutely unpretentious bistro, thedes Muséesis a great place to cool your heels over a glass or two of red or white after stomping around the Marais all day.",
+    "address": "49, rue de Turenne",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/3rd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "3rd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Café Solo",
+    "description": "On a newly car-free street, the Solo has a huge music collection which they are in the process of selling off at €6 per CD.",
+    "address": "6, rue Dupuis",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/3rd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "3rd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Les Enfants Rouge",
+    "description": "This one is makes for another tough call between theEatandDrinksections. It's a completely traditional French bistro with a popular bar in the evenings.",
+    "address": "9, rue de Beauce",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/3rd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "3rd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Léonard",
+    "description": "If you like trendy décor this is your joint. Free Wi-Fi.",
+    "address": "57, rue De Turbigo",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/3rd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "3rd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "La Perle",
+    "description": "A small corner café-bar well-known to the trendy people of Le Marais. Dozens of young and old people gather here every evening, especially on weekends. There are also few other cool bars to enjoy on the rue Vieille du Temple.",
+    "address": "rue Vieille du Temple/rue de la Perle",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/3rd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "3rd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "The Quiet Man",
+    "description": "This Irish pub has sessions and Irish music almost (but not quite) nightly. The atmosphere is tops for the genre.",
+    "address": "5, rue des Haudriettes",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/3rd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "3rd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "La Villa Kéops",
+    "description": "The motif is Egyptian, while the clientele appears to be almost entirely gay men. Free Wi-Fi.",
+    "address": "58, boul Sébastopol",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/3rd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "3rd arrondissement",
+    "budget_tier": "mid-range"
+  }
+]

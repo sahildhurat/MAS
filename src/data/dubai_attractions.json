@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Burj Khalifa",
+    "description": "Tallest building in the world.",
+    "address": "Downtown Dubai",
+    "price_range": "AED 150+",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai",
+    "_source": "Wikivoyage Dubai",
+    "category": "culture",
+    "crowd_level": "high",
+    "entry_fee_aed": 150.0,
+    "recommended_duration_hours": 2.0,
+    "best_time": "morning",
+    "neighborhood": "Downtown Dubai"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Downtown Dubai",
+    "aka": [
+      "Downtown"
+    ],
+    "vibe": "modern",
+    "crowd_level": "high",
+    "budget_tier": "luxury",
+    "highlights": [
+      "Burj Khalifa"
+    ]
+  },
+  {
+    "name": "Deira",
+    "aka": [
+      "Old Dubai"
+    ],
+    "vibe": "traditional",
+    "crowd_level": "medium",
+    "budget_tier": "budget",
+    "highlights": [
+      "Gold Souk"
+    ]
+  },
+  {
+    "name": "Dubai Marina",
+    "aka": [
+      "Marina"
+    ],
+    "vibe": "expat",
+    "crowd_level": "high",
+    "budget_tier": "luxury",
+    "highlights": [
+      "Marina Walk"
+    ]
+  }
+]

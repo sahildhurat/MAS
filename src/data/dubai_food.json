@@ -1,0 +1,13 @@
+[
+  {
+    "name": "Al Ustad Special Kabab",
+    "description": "Famous Iranian kababs.",
+    "address": "Bur Dubai",
+    "price_range": "Budget",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai",
+    "_source": "Wikivoyage Dubai",
+    "cuisine": "Middle Eastern",
+    "budget_tier": "budget",
+    "neighborhood": "Bur Dubai"
+  }
+]

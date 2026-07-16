@@ -1,0 +1,14 @@
+[
+  {
+    "tier": "budget",
+    "daily_est_usd": 50
+  },
+  {
+    "tier": "mid-range",
+    "daily_est_usd": 150
+  },
+  {
+    "tier": "luxury",
+    "daily_est_usd": 500
+  }
+]

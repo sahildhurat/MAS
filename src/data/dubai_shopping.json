@@ -1,0 +1,12 @@
+[
+  {
+    "name": "The Dubai Mall",
+    "description": "Largest mall.",
+    "address": "Downtown Dubai",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai",
+    "_source": "Wikivoyage Dubai",
+    "type": "mall",
+    "neighborhood": "Downtown Dubai"
+  }
+]

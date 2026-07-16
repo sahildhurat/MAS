@@ -1,0 +1,832 @@
+[
+  {
+    "name": "Bhatkal Restaurant",
+    "description": "An Indian restaurant",
+    "address": "Baniyas Rd",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Deira",
+    "_source": "Wikivoyage Dubai",
+    "district": "Deira",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Al Bait ALqadeem Restaurant and Cafe",
+    "description": "A traditional restaurant",
+    "address": "1 Al Suq Al Kabeer St",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Deira",
+    "_source": "Wikivoyage Dubai",
+    "district": "Deira",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Al-Karmel Somali Restaurant",
+    "description": "East African cuisine",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Deira",
+    "_source": "Wikivoyage Dubai",
+    "district": "Deira",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Avon Restaurant",
+    "description": "",
+    "address": "Old Baladiya St",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Deira",
+    "_source": "Wikivoyage Dubai",
+    "district": "Deira",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Kojranwala Restaurant",
+    "description": "",
+    "address": "10 16 A St",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Deira",
+    "_source": "Wikivoyage Dubai",
+    "district": "Deira",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Virpur Restaurant",
+    "description": "",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Deira",
+    "_source": "Wikivoyage Dubai",
+    "district": "Deira",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Africana Home Restaurant Nakheel Deira Park",
+    "description": "",
+    "address": "1820, Lootah Building Behind Golden Square Hotel Street 118",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Deira",
+    "_source": "Wikivoyage Dubai",
+    "district": "Deira",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Amba Restaurant",
+    "description": "",
+    "address": "Street # 24, Naif Road",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Deira",
+    "_source": "Wikivoyage Dubai",
+    "district": "Deira",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Kalthappam Restaurant",
+    "description": "",
+    "address": "12 24 St",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Deira",
+    "_source": "Wikivoyage Dubai",
+    "district": "Deira",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Tayeb Kitchen & Restaurant",
+    "description": "",
+    "address": "Al Makthoum Street",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Deira",
+    "_source": "Wikivoyage Dubai",
+    "district": "Deira",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "White Falcon Restaurant",
+    "description": "",
+    "address": "77 - 77 Al Ittihad Rd",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Deira",
+    "_source": "Wikivoyage Dubai",
+    "district": "Deira",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Molouk Al Shawarma",
+    "description": "",
+    "address": "40c Street 60",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Deira",
+    "_source": "Wikivoyage Dubai",
+    "district": "Deira",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Al Dawaar Revolving Restaurant",
+    "description": "Serving an assortment of cuisines, the highlight of this beautiful restaurant is that it revolves, giving a nice tour of the city.",
+    "address": "Hyatt Regency",
+    "price_range": "Lunch: 185 dirhams per person, dinner: 235 dirhams per person",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Deira",
+    "_source": "Wikivoyage Dubai",
+    "district": "Deira",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Al Fanar Restaurant & Cafe",
+    "description": "Authentic Emirati cuisine, in the ambience of Dubai recreated from the 1960s.",
+    "address": "Canal Walk, Dubai Festival City Mall",
+    "price_range": "30-200 dirhams",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Deira",
+    "_source": "Wikivoyage Dubai",
+    "district": "Deira",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Kiku",
+    "description": "Japanese cuisine. Very high quality and very popular.",
+    "address": "Le Meridien Dubai",
+    "price_range": "150 dirhams",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Deira",
+    "_source": "Wikivoyage Dubai",
+    "district": "Deira",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Legends Steakhouse",
+    "description": "Part of the Creek Golf Clubhouse. The waterfront restaurant right on Dubai Creek is very popular with residents.",
+    "address": "Dubai Creek Golf Club",
+    "price_range": "Around 200 dirhams per head",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Deira",
+    "_source": "Wikivoyage Dubai",
+    "district": "Deira",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Al Bait Alqadeem Restaurant & Cafe",
+    "description": "Emirati cuisine in a Emirati traditional house.",
+    "address": "Al Ahmadiya St crossing 15a St, Al Ras",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Deira",
+    "_source": "Wikivoyage Dubai",
+    "district": "Deira",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Floating Restaurants",
+    "description": "Tens of dhows propose a diner during a 2-hour cruise on the creek.",
+    "address": "Baniyas Rd, Al Sabkha & Al Rigga & Rigga Al Buteen communities",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Deira",
+    "_source": "Wikivoyage Dubai",
+    "district": "Deira",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "JW's Steakhouse",
+    "description": "This is the Marriott's signature restaurant. Very popular with Dubai residents.",
+    "address": "JW Marriott Hotel",
+    "price_range": "350 dirhams per head",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Deira",
+    "_source": "Wikivoyage Dubai",
+    "district": "Deira",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Filli Cafeteria",
+    "description": "Probably the most popular tea spots in town, especially Filli, who serves over 4,000 cups a day. Try thezaffrani chai(milk tea with saffron) or thedoodh kadak(strong milk tea).",
+    "address": "Al Mamzar",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Deira",
+    "_source": "Wikivoyage Dubai",
+    "district": "Deira",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "The Edge Pool & Bar",
+    "description": "Small bar but wonderful views especially at sunset.",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Deira",
+    "_source": "Wikivoyage Dubai",
+    "district": "Deira",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "X Club",
+    "description": "Russia-themed bar.",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Deira",
+    "_source": "Wikivoyage Dubai",
+    "district": "Deira",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Gharana",
+    "description": "Gharana an Indian Restaurant in Holiday Inn Dubai – Al Barsha hotel brings you flavors of various spices and herbs with live entertainment.",
+    "address": "Sheikh Zayed Road",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Bur_Dubai",
+    "_source": "Wikivoyage Dubai",
+    "district": "Bur Dubai",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Basta Art Cafe",
+    "description": "Set in a lovely garden courtyard in a restored house. Great place to take a breather with a cold drink and write some postcards. The sandwiches-and-salads menu is aimed squarely at tourists, but if you are sick of kebabs, they will cater to your salmon-avocado wrap and mango smoothie cravings. The \"Basta Special\" drink of mint and lemon is also excellent.",
+    "address": "Bastakiya",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Bur_Dubai",
+    "_source": "Wikivoyage Dubai",
+    "district": "Bur Dubai",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Gazebo",
+    "description": "Very nice and warm welcome given by the waiters. Food as good too. Not so expensive when compared to the quality of food.",
+    "address": "Kuwait St",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Bur_Dubai",
+    "_source": "Wikivoyage Dubai",
+    "district": "Bur Dubai",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Ravi Restaurant",
+    "description": "A Pakistani restaurant that provides cheap Pakistani & Indian food. Good for anyone with a spicy tooth.",
+    "address": "near Mussala Tower",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Bur_Dubai",
+    "_source": "Wikivoyage Dubai",
+    "district": "Bur Dubai",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "[formerly dead link]Student Biryani",
+    "description": "A Pakistani restaurant serving the country's most popular biryani.",
+    "address": "Kuwait St, Al Karama",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Bur_Dubai",
+    "_source": "Wikivoyage Dubai",
+    "district": "Bur Dubai",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Local House",
+    "description": "Emirati cuisine featuring camel meats and camel milkshakes in a traditional Dubai house.",
+    "address": "House 51, Al Fahidi Historical Neighbourhood, 19 Al Fahidi St, Al Souk Al Kabeer community",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Bur_Dubai",
+    "_source": "Wikivoyage Dubai",
+    "district": "Bur Dubai",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Al Haj Bundu Khan",
+    "description": "Indian and Pakistani food.",
+    "address": "Lamcy Plaza, Oud Metha",
+    "price_range": "About 100 AED",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Bur_Dubai",
+    "_source": "Wikivoyage Dubai",
+    "district": "Bur Dubai",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Pars Iranian Kitchen",
+    "description": "This is an open air Iranian restaurant where one can sit in traditional machans (large bed-like seating) and enjoy a fine Iranian meal. The speciality is the mixed grill which is served with live coal. After the meal, you may smoke a traditional sheesha pipe. No alcohol served.",
+    "address": "Shk Zayed Rd",
+    "price_range": "Around 150 dhs per person",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Bur_Dubai",
+    "_source": "Wikivoyage Dubai",
+    "district": "Bur Dubai",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Wafi Gourmet",
+    "description": "Excellent Lebanese cuisine and ambience. In the cooler months the outdoor verandah is a pleasure. No alcohol served.",
+    "address": "Wafi Mall, Oud Metha",
+    "price_range": "About 100 AED",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Bur_Dubai",
+    "_source": "Wikivoyage Dubai",
+    "district": "Bur Dubai",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Yakitori House",
+    "description": "Japanese cuisine, very popular with the Japanese expat community.",
+    "address": "Century Hotel, Khalid Bin Walid St, Bur Dubai",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Bur_Dubai",
+    "_source": "Wikivoyage Dubai",
+    "district": "Bur Dubai",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Asha's",
+    "description": "Indian cuisine. Run by Asha Bosle. Good food but a little expensive",
+    "address": "Wafi Centre",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Bur_Dubai",
+    "_source": "Wikivoyage Dubai",
+    "district": "Bur Dubai",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Manhattan Grill",
+    "description": "Fine dining restaurant with New York-inspired cuisine, specialising in steak. A suitable venue for romantic dinners and family gatherings.",
+    "address": "Grand Hyatt Dubai",
+    "price_range": "30-300 AED",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Bur_Dubai",
+    "_source": "Wikivoyage Dubai",
+    "district": "Bur Dubai",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Barrels Pub",
+    "description": "It is a bar is a clean, quiet and bright venue with large variates of snacks options. Every wall is mounted with screen playing number of sports games. The interiors looks good with polished timber tables and benches all around and wall cladding.",
+    "address": "Majestic Hotel Tower",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Bur_Dubai",
+    "_source": "Wikivoyage Dubai",
+    "district": "Bur Dubai",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Bollywood Café",
+    "description": "Excellent DJ, Live music and Indian food. It is aBollywood-themed glamorous bar and nightlife with elegant to casual laid backs and pleasant musical twists, mostly Indian music.",
+    "address": "D 79, Regent Palace Hotel",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Bur_Dubai",
+    "_source": "Wikivoyage Dubai",
+    "district": "Bur Dubai",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Chill Rooftop Lounge",
+    "description": "Dance floor with excellent DJ. It is an expansive rooftop venue painted in pink surrounded with fake grass. An outdoor seating place with good food.",
+    "address": "Royal Ascot Hotel",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Bur_Dubai",
+    "_source": "Wikivoyage Dubai",
+    "district": "Bur Dubai",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Marine's Club",
+    "description": "A lively bar and nightclub with 80s music most of the time. It is a budget friendly venue with great service and superb bouncers.",
+    "address": "Seaview Hotel",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Bur_Dubai",
+    "_source": "Wikivoyage Dubai",
+    "district": "Bur Dubai",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "800 Pizza",
+    "description": "Traditional & authentic Italian pizza baked in wood fired Italian stone oven, thin & crispy crust.",
+    "address": "Sheykh Zayed Rd, Barsha",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jumeirah",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jumeirah",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "More Cafe",
+    "description": "Serves breakfast, lunch and light continental and oriental meals. Good service and big portions.",
+    "address": "Dubai Mall",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jumeirah",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jumeirah",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Noodle House",
+    "description": "Asian food.",
+    "address": "Emirates Towers Shopping Blvd, Madinat Jumeirah",
+    "price_range": "One meal about 80dirham",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jumeirah",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jumeirah",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Chill Out",
+    "description": "Have a delicious contemporary European food in ice lounge at a chilling temperature of −6°C (21°F). It is first of its kind in the Middle East. From tables to even crockery in which food is served, all made of ice.",
+    "address": "Times Square Centre, Ground F, Sheihk Zayed Rd, Al Marabea St, Al Quoz community",
+    "price_range": "entrance fee: 80dirhams/person",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jumeirah",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jumeirah",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Chimes",
+    "description": "Thai, Singaporean, Malaysian and Indonesian themed food, and the popular house speciality must be the pepper or chili crab. You can eat at the restaurant or order home delivery to most areas of new Dubai.",
+    "address": "Al Barsha",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jumeirah",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jumeirah",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Jedoudna Restaurant",
+    "description": "A family-run Lebanese restaurant. With outdoor seating and separate shisha area.",
+    "address": "Rimal Sector, The Walk at Jumeirah Beach Residence",
+    "price_range": "About 100dirham",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jumeirah",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jumeirah",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Karam Beirut",
+    "description": "Excellent Lebanese food.",
+    "address": "1st floor, Mall of Emirates, Sheykh Zayed Rd, Al Barsha",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jumeirah",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jumeirah",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Lal Qila Dubai",
+    "description": "Pakistani cuisine.",
+    "address": "Diyafa St, Jumairah-1",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jumeirah",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jumeirah",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "London Fish & Chips",
+    "description": "Fish, chips, sharky meals, traditional battered, baked potatoes, sandwiches, salads and soups",
+    "address": "Tunisia Food Court, Ibn Batutta Mall, Jebel Ali Village",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jumeirah",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jumeirah",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Toscana",
+    "description": "Italian.",
+    "address": "Souk Madinat Jumeirah",
+    "price_range": "About 100dirham",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jumeirah",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jumeirah",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Al Fresco",
+    "description": "Specialized in Italian food with cosy outdoor seating. Business lunch, Family friendly place. Smoking and alcohol is permitted. Try the garlic bruschetta with traditional tomato, the leafy green salad, oozy burrata cheese, tomato, sprinkled with drizzles of balsamic vinegar.",
+    "address": "Crowne Plaza, Dubai, Sheikh Zayed Road",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jumeirah",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jumeirah",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Al Mahara",
+    "description": "Part of the Burj Al Arab hotel, and as you would expect is also very high quality, especially seafood.",
+    "address": "Burj Al Arab",
+    "price_range": "700dirham",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jumeirah",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jumeirah",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "At.mosphere",
+    "description": "Exclusive fine dining restaurant on Level 122 of Burj Khalifa.",
+    "address": "Burj Khalifa",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jumeirah",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jumeirah",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "The Gem Garden",
+    "description": "Continental restaurant.",
+    "address": "Holiday Inn Dubai - Al Barsha, Sheikh Zayed Road",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jumeirah",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jumeirah",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Margaux",
+    "description": "European, steak and continental cuisine. Pleasing and stunning ambiance with variations and one could enjoy the views of Burj Khalifa and the fountain shows.",
+    "address": "Souk al Bahar, opp dubai mall fountains",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jumeirah",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jumeirah",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Options, by Sanjeev Kapoor",
+    "description": "Run by famed Indian TV chef Sanjeev Kapoor. Drinks served. Reservations recommended especially on Friday nights.",
+    "address": "Sheikh Zayed Rd",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jumeirah",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jumeirah",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "The Royal Budha",
+    "description": "Authentic Thai restaurant.",
+    "address": "Holiday Inn Dubai - Al Barsha, Sheikh Zayed Road",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jumeirah",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jumeirah",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Shang Palace",
+    "description": "Good Chinese food. No smoking",
+    "address": "Level 1, Shangri-La Hotel, Shk Zayed Rd",
+    "price_range": "200dirham",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jumeirah",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jumeirah",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Al Nafoorah",
+    "description": "Arabic, Lebanese and Middle Eastern cuisines. Outdoor seating with perfect sense of fine dining accompanied with comfortable, Arabian-style terrace. Smoking and alcohol is permitted.",
+    "address": "Jumeirah, Emirates Towers Boulevard, Sheikh Zayed Road",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jumeirah",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jumeirah",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "360°",
+    "description": "Jumeirah Beach Hotel Complex. Open air bar with great views of the Burj hotel and the Jumeirah beach hotel all helped by a cool breeze from the ocean. Various DJs but think Ibiza lounge bar and you will not be far off.",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jumeirah",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jumeirah",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Buddha Bar",
+    "description": "Branch of the international Asian-themed bar/restaurant. Full of crowds.",
+    "address": "Grosvenor House Dubai, Al Sufouh Rd",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jumeirah",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jumeirah",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Barasti",
+    "description": "Built in three levels (each playing its own music), with lounging areas on the beach, lots of young and foreign people come here during the weekend. Very popular with expats.",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jumeirah",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jumeirah",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Nasimi Beach",
+    "description": "Great bar/club on the beach in the Palm Jumeirah.",
+    "address": "The Atlantis",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jumeirah",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jumeirah",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Long's Bar",
+    "description": "The longest bar in the UAE, typical English style with live football, similar to a UK Wetherspoons. Great music and DJs plus food and friendly atmosphere.",
+    "address": "Sheikh Zayed Rd",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jumeirah",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jumeirah",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Left Bank",
+    "description": "O the waterfront in one of the most tranquil areas of Dubai. A great food menu leads on to some excellent cocktails and music inside.",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jumeirah",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jumeirah",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Observatory",
+    "description": "Bar and restaurant with great view across Palm Jumeirah (on a clear day!) Popular happy hour with the after work crowd on Thursday from 18:00-20:00.",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jumeirah",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jumeirah",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Skyview Bar",
+    "description": "Live local and international bands, reservations are a must.",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jumeirah",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jumeirah",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Vu's Bar",
+    "description": "Try the 51st Floor house cocktail, it's so deliciously strong, also there's a staggering 200 cocktails to choose from.",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jumeirah",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jumeirah",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Zero Gravity",
+    "description": "Beach club, a nice place for partying.",
+    "address": "Dubai Marina, Al Seyahi St",
+    "price_range": "free entrance, 50dirham a beer",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jumeirah",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jumeirah",
+    "budget_tier": "budget"
+  },
+  {
+    "name": "VIP Room",
+    "description": "It is a lounge-like lively space that offers mid-range to high-price drinks. The huge multi-color circular space is cornered by large LCD screens and exclusive tables and the scantily clad podium dancers.",
+    "address": "JW Marriott, Marquis Hotel Dubai, Sheikh Zayed Road",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jumeirah",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jumeirah",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "The Act",
+    "description": "This venue is full of dance artists, mischievous performances, women performing unusual stunts and on-stage antics. It is a place where you will forget that you are in Dubai. The drinks are good and are slightly over priced but this place will make you feels liberated, little bit different and edgy.",
+    "address": "Shangri-La, Sheikh Zayed Road",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jumeirah",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jumeirah",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "The Cigar Bar",
+    "description": "Specialized in true cigar aficionado, cognacs and whiskies. Smoking is permitted. Dresscode is smart casuals. It is a traditional venue with modern rich dark enveloping and mahogany lined interior furnishing. The Cigar Bar will be closed during the Holy Month of Ramadan",
+    "address": "Fairmont Dubai, Sheikh Zayed Road",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jumeirah",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jumeirah",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Zinc",
+    "description": "It is the city’s most popular nightclubs with girls night out, dance floor and variety of DJ sets. This place is always over crowded and the drinks are budget friendly.",
+    "address": "Crowne Plaza Dubai, Sheikh Zayed Road",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jumeirah",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jumeirah",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Jebel Ali Club",
+    "description": "A good restaurant with relaxing pub, pools, darts, swimming pool and steam rooms. The drink and food is budget friendly.",
+    "address": "Old Jabel Ali Village, Near Ibn Battuta Mall (Sheikh Zayed Rd), Dubai",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jebel_Ali",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jebel Ali",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "The Kebab Shop",
+    "description": "Good budget friendly food specialized in British, Pakistani, Indian and Turkish food",
+    "address": "Food Court Area 1, Jafza, Dubai",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jebel_Ali",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jebel Ali",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Kcal Healthy Fast Food",
+    "description": "Healthy fast food and great dining experience.",
+    "address": "JLT, Block D",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jebel_Ali",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jebel Ali",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Chicken Tikka Inn",
+    "description": "Awesome place for great Indian food.",
+    "address": "behind Mall of the Emirates",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jebel_Ali",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jebel Ali",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "La Fontana",
+    "description": "Mediterranean cuisine, generous breakfast buffet, international dishes and a variety of themed dinner buffets, either indoors or on the large outdoor terrace.",
+    "address": "JA Palm Tree Court, Ground Floor, next to the La Fontana Swimming Pool",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jebel_Ali",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jebel Ali",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Mushref Bar",
+    "description": "Shaded by palm trees with numerous pool bars, entertainment zones and sunbeds.",
+    "address": "JA Jebel Ali, Beach Hotel, Jebel Ali",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jebel_Ali",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jebel Ali",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Palmito Pool Bar",
+    "description": "Swim-up pool bar serving good drinks and refreshments.",
+    "address": "JA Palm Tree Court, Jebel Ali, Dubai",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jebel_Ali",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jebel Ali",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Sunset Lounge",
+    "description": "Great Beverages.",
+    "address": "JA Jebel Ali Beach Hotel, Jebel Ali",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jebel_Ali",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jebel Ali",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Diablo Nightclub Dubai",
+    "description": "It is a Moroccan Themed lounge that serves cocktails, shisha, teas and coffees.",
+    "address": "Ibn Battuta Gate Hotel in Jebel Ali",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jebel_Ali",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jebel Ali",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "The Bar",
+    "description": "Casual lounge with indoor and al fresco seating. It serves beverages, cocktails, light snacks and light dishes.",
+    "address": "Courtyard by Marriott Dubai Green Community",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Jebel_Ali",
+    "_source": "Wikivoyage Dubai",
+    "district": "Jebel Ali",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Al Mallah",
+    "description": "Amazing food. It is popular for casual dining, juices, sandwiches and fast food. A good place to visit along with family and friends.",
+    "address": "Al Diyafah Street, Satwa",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Suburbs_and_Hatta",
+    "_source": "Wikivoyage Dubai",
+    "district": "Suburbs and Hatta",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Sidra",
+    "description": "Specialized in Arabic, Lebanese and Middle Eastern Foods. This spacious alfresco area is bigger than other restaurants, full of shrubs and bushes with two distinct large indoor spaces - smokers and non-smokers. It is open for post party up to 4am.",
+    "address": "Dune Centre, Satwa",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Dubai/Suburbs_and_Hatta",
+    "_source": "Wikivoyage Dubai",
+    "district": "Suburbs and Hatta",
+    "budget_tier": "mid-range"
+  }
+]

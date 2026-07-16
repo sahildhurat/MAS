@@ -1,0 +1,352 @@
+[
+  {
+    "name": "Centre International BVJ Paris-Louvre",
+    "description": "This is just about as cheap as it's going to get in the 1st. If you are here to study at the Louvre, and want to stay focused it has a location which can't be beat, just across rue Rivoli.",
+    "address": "20, rue Jean-Jacques Rousseau",
+    "price_range": "€26+",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Hotel Karraz",
+    "description": "Next to Les Halles Metro Station.",
+    "address": "12, rue Mondétour",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Hôtel Montpensier",
+    "description": "Another semi-cheapie right in the middle of everything.",
+    "address": "12, rue de Richelieu",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Hôtel Saint-Honoré",
+    "description": "Close to the Louvre. The place was renovated in the last few years, so the comfort level is pretty good considering it hasn't received a star rating yet.",
+    "address": "85, rue Saint-Honoré",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Hôtel Brighton",
+    "description": "The executive and deluxe rooms offer a breathtaking views of the Louvre, the Jardin des Tuileries, and the Eiffel Tower. Classic Parisian-style hotel next to shopping and cultural hot spots.",
+    "address": "218, rue de Rivoli",
+    "price_range": "Double from €229",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Hôtel Britannique",
+    "description": "Anglophiles in Paris could do worse than to stay at this most Anglophile of French hotels. The location is good, at the very east end of the 1st.",
+    "address": "20, av Victoria",
+    "price_range": "Double from €157",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Hôtel Louvre Bon Enfants",
+    "description": "Most reviewers give the hotel very high marks for cleanliness and comfort, but the real draw is the location: only steps from thePalais Royal/Louvrestop onMétroLine 1.",
+    "address": "5, rue des Bons-Enfants",
+    "price_range": "Single rooms start at €90, doubles around €110",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Hôtel Mansart",
+    "description": "This charming 3-star hotel is next to the Place Vendôme and 2 minutes' walk from the Opera Garnier and famous Parisian department stores. Antique furniture and paintings create an atmosphere of typical Parisian house.",
+    "address": "5, rue des Capucines",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Hôtel de la Place du Louvre",
+    "description": "As its name suggests, this hotel is really close to the Louvre. Rooms on the street offer an impressive view on the Louvre.",
+    "address": "21, rue des Prêtres Saint Germain l'Auxerrois",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Hôtel Victoria Châtelet",
+    "description": "A cozy, competitively priced 24 room hotel with a friendly Art Deco atmosphere. It is located next to the Chatelet Theatre in the very centre of Paris across from Notre Dame. It is close to bus, taxi, Metro and RER stations: Chatelet les Halles, as well as three nearby monitored parking garages.",
+    "address": "17 Avenue Victoria",
+    "price_range": "Basic rooms start at €89 and doubles at €90",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Milestay Paris Les Halles",
+    "description": "Modern aparthotel with 9 furnished apartments, from budget studios to 2BR duplex. Various amenities including AC, kitchen and digital concierge.",
+    "address": "4 rue des Halles",
+    "price_range": "From €140",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Novotel Paris Les Halles",
+    "description": "Renovated to Novotel's newest standards, it is one of the brand's flagships and earns consistently good reviews. While much cheaper than the luxury hotels closer to Place Vendôme, it is one of the pricier Novotels in Paris, if not the world.",
+    "address": "8 Place Marguerite de Navarre",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Castille Paris",
+    "description": "In the fashion district of Paris, the Castille Paris offers chic rooms that all look out onto the Rue Cambon. Some rooms are designed in a \"Coco Chanel\" style with beige and black tones.",
+    "address": "33-37 rue Cambon",
+    "price_range": "€350-820",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Hôtel Costes",
+    "description": "When the Costes brothers, who made their fortune in the Paris café trade, opened this designer hotel a couple of years ago it became an instant hit with the rich and famous, especially those of Hollywood. Whether it's worth the price for the exquisite interior decoration and the chance to rub elbows with a few movie stars is up to you to decide. They don't pay travel agent commissions, so either book it yourself, or pony up the extra €50 the agent would normally get.",
+    "address": "239, rue Saint-Honoré",
+    "price_range": "A basic room starts at €500 off-season",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Hôtel Ritz",
+    "description": "If there is any one hotel in the world which is not merely \"putting on\" the Ritz it would be this one, whose very name has entered the English language as a generic word for luxury (or the appearance thereof). The Ritz may not in fact be the fanciest hotel in Paris anymore, but it's always in the running. It's 350 times the price of a budget room in the neighborhood, but heck, maybe it's your honeymoon.",
+    "address": "15 Place Vendôme",
+    "price_range": "€650-8,500",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Hôtel de Vendôme",
+    "description": "Occupying a building which was once the site of the Embassy of the Republic of Texas, the Hôtel de Vendôme is one of the most exclusive addresses anywhere, much like the neighbouring Ritz. The 29 rooms each have been decorated in the style of a different period, such as Classic, Baroque, or Deco.",
+    "address": "1, Place Vendôme",
+    "price_range": "Singles start at €350; suites can be as much as €4,000",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Hôtel Du Louvre, a Hyatt Hotel",
+    "description": "The hotel, built in 1855, is a brand itself enough for Hyatt to take second place to it. The hotel is a cornerstone for the Unbound Collection, a new Hyatt sub-brand created for notable properties, many of which pre-date the Hyatt chain itself. It is literally next to the Louvre and keeps thebelle epoquecharm alive throughout the property, albeit remaining contemporary and not pretentious. The Brasserie, where breakfasts are served, has a terrace with a splendid direct view of the Louvre.",
+    "address": "Place André Malraux",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Le Meurice",
+    "description": "In business since 1815 and founded to cater to English travellers, Le Meurice has a rare distinction of being considered an actual palace by the French government (yes, they do regulate such things). Refurbished many times, the last time in 2007 by Philippe Stark, it has followed the changing demands of travellers yet retains numerous artefacts of its long history. Both its rooms and its famous ground-floor restaurant are frequent haunts of celebrities of all sorts, and it becomes a true potpourri of famous faces during the Paris Fashion Weeks.",
+    "address": "228, Rue De Rivoli",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Renaissance Paris Vendôme Hotel",
+    "description": "Hidden in a side street and slightly demure, the Renaissance offers a welcome break from the revival-furniture-and-chandelier-filled surrounding hotels. Tasteful decor and quality service make up for the fact that some rooms are on the small side.",
+    "address": "4 Rue Du Mont Thabor",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "The Westin Paris Vendôme",
+    "description": "A favourite with wealthy Russian tourists, the Westin Vendôme seems almost like a poor relative to other luxury hotels in the district, and certainly rises above the chain's average to match them. Not all rooms are created equal, and to get the best, one needs to shell out a significant supplement for the Tuileries view and high floor. All rooms are quite large by Parisian standards, though. The hotel has a sizeable area devoted to function rooms, and there is almost always something happening inside. When not closed for an event, the Summer Terrace is a highlight.",
+    "address": "3 rue de Castiglione",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/1st_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "1st arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Hôtel des Boulevards",
+    "description": "",
+    "address": "10, rue de la Ville-Neuve",
+    "price_range": "Doubles with sink, €40; with a shower, €55",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/2nd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "2nd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Hôtel Sainte-Marie",
+    "description": "",
+    "address": "6, rue de la Ville-Neuve",
+    "price_range": "Doubles with a sink, €40-54; with a shower and toilet, €60-70",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/2nd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "2nd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Hôtel Ascot Opéra",
+    "description": "Short walk from the department stores Printemps and Galeries Lafayette, Opéra, Place de la Madeleine, and the Louvre.",
+    "address": "2, rue Monsigny",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/2nd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "2nd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Hôtel Bonne Nouvelle",
+    "description": "Old world charm.",
+    "address": "17, rue Beauregard",
+    "price_range": "Doubles, €60-70",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/2nd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "2nd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Hôtel Lautrec Opéra",
+    "description": "",
+    "address": "8-10 rue d'Amboise",
+    "price_range": "€95+",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/2nd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "2nd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Hôtel Paris France",
+    "description": "",
+    "address": "21, rue du louvre",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/2nd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "2nd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Hôtel Vivienne",
+    "description": "",
+    "address": "40, rue Vivienne",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/2nd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "2nd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Tiquetonne Hôtel",
+    "description": "Closed during August, and between Christmas and New Year's.",
+    "address": "6, rue Tiquetonne",
+    "price_range": "Doubles with a sink, €40",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/2nd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "2nd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Tryp Hôtel Paris François",
+    "description": "",
+    "address": "3, boul Montmartre",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/2nd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "2nd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Hôtel Etats-Unis Opéra",
+    "description": "",
+    "address": "16, rue d'Antin",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/2nd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "2nd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Hôtel Victoires Opera",
+    "description": "",
+    "address": "56, rue de Montorgueil",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/2nd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "2nd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Park Hyatt Paris - Vendome",
+    "description": "Palatial hotel with a residential feel and personalised service. Within walking distance of Place Vendôme.",
+    "address": "5, rue de la Paix",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/2nd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "2nd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Hotel Stendhal Place Vendôme Paris - MGallery Collection",
+    "description": "",
+    "address": "22 Rue Danielle Casanova",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/2nd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "2nd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Hôtel du Marais",
+    "description": "This little place has two names which can be a little confusing. It gets mixed reviews but some people love it and the location is hard to beat.",
+    "address": "2bis, rue Commines",
+    "price_range": "Doubles, €70-88",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/3rd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "3rd arrondissement",
+    "budget_tier": "mid-range"
+  },
+  {
+    "name": "Austin's Arts et Metiers Hôtel",
+    "description": "The rooms are small (as usual) and kept very clean.  You are best off asking for something facing the front since the central courtyard is not very attractive. Particularly the 6th floor rooms are said to be quite nice.",
+    "address": "6, rue Montgolfier",
+    "price_range": "Doubles, €120",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris/3rd_arrondissement",
+    "_source": "Wikivoyage Paris",
+    "district": "3rd arrondissement",
+    "budget_tier": "mid-range"
+  }
+]

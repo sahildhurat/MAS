@@ -1,0 +1,332 @@
+[
+  {
+    "name": "Eiffel Tower",
+    "description": "No other monument better symbolizes Paris.",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris",
+    "_source": "Wikivoyage Paris",
+    "recommended_duration_hours": 2.0,
+    "best_time": "morning"
+  },
+  {
+    "name": "Arc de Triomphe de l'Étoile",
+    "description": "The Arc de Triomphe exudes grandeur and offers a central view of the city.",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris",
+    "_source": "Wikivoyage Paris",
+    "recommended_duration_hours": 2.0,
+    "best_time": "morning"
+  },
+  {
+    "name": "Champs-Élysées",
+    "description": "Widely regarded to be one of the most recognizable avenues in the world",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris",
+    "_source": "Wikivoyage Paris",
+    "recommended_duration_hours": 2.0,
+    "best_time": "morning"
+  },
+  {
+    "name": "Notre Dame Cathedral",
+    "description": "ImpressiveGothiccathedral that was the inspiration for Victor Hugo's novelThe Hunchback of Notre Dame.",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris",
+    "_source": "Wikivoyage Paris",
+    "recommended_duration_hours": 2.0,
+    "best_time": "morning"
+  },
+  {
+    "name": "Sacré Coeur",
+    "description": "A church perched on top of the highest point in Paris. Behind the church is the artists' area, in front are spectacular views of the whole city.",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris",
+    "_source": "Wikivoyage Paris",
+    "recommended_duration_hours": 2.0,
+    "best_time": "morning"
+  },
+  {
+    "name": "Opera Garnier",
+    "description": "Masterpiece of theatre architecture of the 19th century built by Charles Garnier and inaugurated in 1875 housing the Paris Opera since it was founded by Louis XIV.",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris",
+    "_source": "Wikivoyage Paris",
+    "recommended_duration_hours": 2.0,
+    "best_time": "morning"
+  },
+  {
+    "name": "Catacombes de Paris",
+    "description": "Used to store the exhumed bones from the overflowing Paris cemetery. The bones of more than 6 million bodies lie here.",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris",
+    "_source": "Wikivoyage Paris",
+    "recommended_duration_hours": 2.0,
+    "best_time": "morning"
+  },
+  {
+    "name": "Grande Arche de la Défense",
+    "description": "A modern office-building variant of the Arc de Triomphe.",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris",
+    "_source": "Wikivoyage Paris",
+    "recommended_duration_hours": 2.0,
+    "best_time": "morning"
+  },
+  {
+    "name": "Panthéon",
+    "description": "Underneath, the final resting place for the great heroes of the French Republic including Voltaire, Victor Hugo, and Marie Skłodowska-Curie; above, a marvellous view of the city.",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris",
+    "_source": "Wikivoyage Paris",
+    "recommended_duration_hours": 2.0,
+    "best_time": "morning"
+  },
+  {
+    "name": "Père-Lachaise Cemetery",
+    "description": "Unlike any cemetery in the world. Ornate grave stones, monuments set among tree lined lanes. See the graves of Jim Morrison, Oscar Wilde, and Frédéric Chopin, among many others.",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris",
+    "_source": "Wikivoyage Paris",
+    "recommended_duration_hours": 2.0,
+    "best_time": "morning"
+  },
+  {
+    "name": "Sainte-Chapelle",
+    "description": "Exquisite stained glass chapel. More beautiful interior than the gloomy Notre Dame Cathedral.",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris",
+    "_source": "Wikivoyage Paris",
+    "recommended_duration_hours": 2.0,
+    "best_time": "morning"
+  },
+  {
+    "name": "The Louvre",
+    "description": "One of the finest museums in the world of art and culture. Home of the Mona Lisa and innumerable others. Enormous building and collection, plan at least two visits..",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris",
+    "_source": "Wikivoyage Paris",
+    "recommended_duration_hours": 2.0,
+    "best_time": "morning"
+  },
+  {
+    "name": "Musée d'Orsay",
+    "description": "Incredible collection housed in a former railway station. Works by the great artists of the 19th century (1848-1914) including Monet's \"Blue Water Lilies, Renoir's \"Bal du moulin de la Galette\", van Gogh's \"Bedroom in Arles\", Whistler's \"The Artists Mother\", etc.",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris",
+    "_source": "Wikivoyage Paris",
+    "recommended_duration_hours": 2.0,
+    "best_time": "morning"
+  },
+  {
+    "name": "Rodin Museum",
+    "description": "Collection and archives dedicated to the sculptor Auguste Rodin, in a charming home with garden.",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris",
+    "_source": "Wikivoyage Paris",
+    "recommended_duration_hours": 2.0,
+    "best_time": "morning"
+  },
+  {
+    "name": "Picasso Museum",
+    "description": "Contains the master's own collection.",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris",
+    "_source": "Wikivoyage Paris",
+    "recommended_duration_hours": 2.0,
+    "best_time": "morning"
+  },
+  {
+    "name": "Musée Marmottan-Monet",
+    "description": "Over 300 paintings of Claude Monet. Also, the works of Berthe Morisot, Edgar Degas, Édouard Manet and Pierre-Auguste Renoir. \"Impression Soleil Levant\" by Monet is on display.",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris",
+    "_source": "Wikivoyage Paris",
+    "recommended_duration_hours": 2.0,
+    "best_time": "morning"
+  },
+  {
+    "name": "Musée de l'Orangerie",
+    "description": "[Jardin des Tuileries] Houses \"The Water Lilies\" (or \"Nymphéas\") - a 360 degree depiction of Monet's flower garden at Giverny. Also, impressionist and post-Impressionist paintings by Cézanne, Matisse, Modigliani, Picasso, Renoir, Rousseau, Soutine, Sisley and others.",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris",
+    "_source": "Wikivoyage Paris",
+    "recommended_duration_hours": 2.0,
+    "best_time": "morning"
+  },
+  {
+    "name": "Musée Delacroix",
+    "description": "Housed in the home of painter Eugène Delacroix.",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris",
+    "_source": "Wikivoyage Paris",
+    "recommended_duration_hours": 2.0,
+    "best_time": "morning"
+  },
+  {
+    "name": "Centre Georges Pompidou",
+    "description": "The museum of modern art. The building and adjoining Stravinsky Fountain are attractions in themselves. Closed for renovation until 2030.",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris",
+    "_source": "Wikivoyage Paris",
+    "recommended_duration_hours": 2.0,
+    "best_time": "morning"
+  },
+  {
+    "name": "Les Invalides",
+    "description": "Very impressive museum of arms and armor from the Middle Ages to today. Also contains the tomb of Napoleon Bonaparte.",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris",
+    "_source": "Wikivoyage Paris",
+    "recommended_duration_hours": 2.0,
+    "best_time": "morning"
+  },
+  {
+    "name": "Musée national du Moyen Âge",
+    "description": "A medieval museum exhibiting the five \"The Lady and the Unicorn\" tapestries, housed in a part Roman, part medieval building.",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris",
+    "_source": "Wikivoyage Paris",
+    "recommended_duration_hours": 2.0,
+    "best_time": "morning"
+  },
+  {
+    "name": "Musée des Arts Décoratifs",
+    "description": "Showcasing eight centuries of French savoir-faire.",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris",
+    "_source": "Wikivoyage Paris",
+    "recommended_duration_hours": 2.0,
+    "best_time": "morning"
+  },
+  {
+    "name": "Carnavalet",
+    "description": "Museum of Paris history; exhibitions are permanent and free. Renovated 2017–2021.",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris",
+    "_source": "Wikivoyage Paris",
+    "recommended_duration_hours": 2.0,
+    "best_time": "morning"
+  },
+  {
+    "name": "Cité des sciences et de l’industrie - La Villette",
+    "description": "Science museum primarily for children.",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris",
+    "_source": "Wikivoyage Paris",
+    "recommended_duration_hours": 2.0,
+    "best_time": "morning"
+  },
+  {
+    "name": "Mémorial de la Shoah",
+    "description": "Paris's Holocaust Memorial Museum, in the heart of the Marais on rue Geoffroy l'Asnier. Free Entry, weekly guided tours. Second Sunday of the month there is a free tour in English.",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris",
+    "_source": "Wikivoyage Paris",
+    "recommended_duration_hours": 2.0,
+    "best_time": "morning"
+  },
+  {
+    "name": "Jacquemart-Andre Museum",
+    "description": "Private collection of French, Italian, and Dutch masterpieces in a typical 19th-century mansion.",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris",
+    "_source": "Wikivoyage Paris",
+    "recommended_duration_hours": 2.0,
+    "best_time": "morning"
+  },
+  {
+    "name": "Guimet Museum",
+    "description": "One of the largest collections outside Asia of Southeast Asian, Indian, Afghan, Chinese, Japanese, and Korean art.",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris",
+    "_source": "Wikivoyage Paris",
+    "recommended_duration_hours": 2.0,
+    "best_time": "morning"
+  },
+  {
+    "name": "French Open",
+    "description": "One of the fourtennisGrand Slam tournaments. It is scheduled for two weeks from the last Sunday in May. The event, on clay courts, features the world’s top-ranked tennis players.",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris",
+    "_source": "Wikivoyage Paris",
+    "recommended_duration_hours": 2.0,
+    "best_time": "morning"
+  },
+  {
+    "name": "Paris Saint-Germain",
+    "description": "",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris",
+    "_source": "Wikivoyage Paris",
+    "recommended_duration_hours": 2.0,
+    "best_time": "morning"
+  },
+  {
+    "name": "Stade de France",
+    "description": "France's national stadium has a capacity of 81,338, and hosts concerts and various events. Soccer clubs sometimes play here when their home stadium is unavailable.",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris",
+    "_source": "Wikivoyage Paris",
+    "recommended_duration_hours": 2.0,
+    "best_time": "morning"
+  },
+  {
+    "name": "Maison Européene de la Photographie",
+    "description": "Important center for contemporary photography with a large exposition area having three or four major expositions per year dedicated to contemporary photography. Housed in an updatedhôtel particulierbuilt in 1706. There is a large library, auditorium and café. Their archive houses over twenty thousand works of art. Admission is free every Wednesday from 17:00 to 20:00.",
+    "address": "5/7 Rue de Fourcy",
+    "price_range": "Admission €9",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris",
+    "_source": "Wikivoyage Paris",
+    "recommended_duration_hours": 2.0,
+    "best_time": "morning"
+  },
+  {
+    "name": "Better Paris Photos",
+    "description": "Better Paris Photos offers instructional tours and workshops that combine hands-on learning of essential photographic techniques with guiding to, and commentary about, the most photogenic spots of Paris. Led by English-speaking photographers and instructors, these tours are open to all skill levels and interest.",
+    "address": "32 Avenue de Suffren",
+    "price_range": "From €195/half day; €290/full day",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris",
+    "_source": "Wikivoyage Paris",
+    "recommended_duration_hours": 2.0,
+    "best_time": "morning"
+  },
+  {
+    "name": "Paris Opera",
+    "description": "",
+    "address": "",
+    "price_range": "",
+    "source_url": "https://en.wikivoyage.org/wiki/Paris",
+    "_source": "Wikivoyage Paris",
+    "recommended_duration_hours": 2.0,
+    "best_time": "morning"
+  }
+]
