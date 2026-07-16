@@ -23,6 +23,64 @@ export default function Home() {
   const latestQuery = React.useRef<string>("");
 
   // Connect to the WebSocket on mount for global chatbot functionality
+  function generateDashboard(query: string) {
+    setIsLoading(true);
+    setError(null);
+    setStreamProgress("Starting AI planning...");
+    
+    planTripStream(query, (event, data) => {
+      if (event === "agent_started") {
+        setStreamProgress(`Agent started: ${data.agent.replace('_', ' ')}...`);
+      } else if (event === "agent_completed") {
+        setStreamProgress(`Agent completed: ${data.agent.replace('_', ' ')}...`);
+      } else if (event === "error") {
+        setError(data.error || "An error occurred.");
+        setIsLoading(false);
+      } else if (event === "complete") {
+        const response = data.data;
+        if (response && response.itinerary) {
+          const days = response.itinerary.days?.map((day: any) => ({
+            dayTitle: `Day ${day.day_number || day.day}: ${day.theme}`,
+            date: new Date(day.date || Date.now()).toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric' }),
+            activities: day.activities?.map((act: any) => ({
+              time: act.time,
+              icon: 'explore',
+              title: act.title,
+              description: act.description,
+              cost: act.estimated_cost_usd || 0,
+              crowdLevel: act.crowd_level || act.crowd_level_estimate || 'Low',
+              imageSrc: act.image_url || 'https://via.placeholder.com/150'
+            })) || []
+          })) || [];
+          
+          setItineraryDays(days);
+          
+          const backendTotal = response.itinerary.total_cost_usd || response.itinerary.total_estimated_cost_usd || 0;
+          setBudgetTotal(backendTotal);
+          
+          const categories = [
+            { name: "Dining", icon: "restaurant", allocated: backendTotal * 0.3, spent: backendTotal * 0.2 },
+            { name: "Activities", icon: "attractions", allocated: backendTotal * 0.5, spent: backendTotal * 0.45 },
+            { name: "Transport", icon: "directions_car", allocated: backendTotal * 0.2, spent: backendTotal * 0.1 },
+          ];
+          
+          setBudgetCategories(categories);
+          setHasData(true);
+        }
+        
+        if (response && response.travel_request) {
+          setCurrentDestination(response.travel_request.destination);
+        }
+      }
+    }, (err) => {
+      console.error(err);
+      setError("An error occurred while planning your trip. The AI might have timed out.");
+      setIsLoading(false);
+    }, () => {
+      setIsLoading(false);
+    });
+  };
+
   React.useEffect(() => {
     let reconnectTimer: NodeJS.Timeout;
     let isMounted = true;
@@ -98,63 +156,6 @@ export default function Home() {
     }
   };
 
-  const generateDashboard = (query: string) => {
-    setIsLoading(true);
-    setError(null);
-    setStreamProgress("Starting AI planning...");
-    
-    planTripStream(query, (event, data) => {
-      if (event === "agent_started") {
-        setStreamProgress(`Agent started: ${data.agent.replace('_', ' ')}...`);
-      } else if (event === "agent_completed") {
-        setStreamProgress(`Agent completed: ${data.agent.replace('_', ' ')}...`);
-      } else if (event === "error") {
-        setError(data.error || "An error occurred.");
-        setIsLoading(false);
-      } else if (event === "complete") {
-        const response = data.data;
-        if (response && response.itinerary) {
-          const days = response.itinerary.days?.map((day: any) => ({
-            dayTitle: `Day ${day.day_number || day.day}: ${day.theme}`,
-            date: new Date(day.date || Date.now()).toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric' }),
-            activities: day.activities?.map((act: any) => ({
-              time: act.time,
-              icon: 'explore',
-              title: act.title,
-              description: act.description,
-              cost: act.estimated_cost_usd || 0,
-              crowdLevel: act.crowd_level || act.crowd_level_estimate || 'Low',
-              imageSrc: act.image_url || 'https://via.placeholder.com/150'
-            })) || []
-          })) || [];
-          
-          setItineraryDays(days);
-          
-          const backendTotal = response.itinerary.total_cost_usd || response.itinerary.total_estimated_cost_usd || 0;
-          setBudgetTotal(backendTotal);
-          
-          const categories = [
-            { name: "Dining", icon: "restaurant", allocated: backendTotal * 0.3, spent: backendTotal * 0.2 },
-            { name: "Activities", icon: "attractions", allocated: backendTotal * 0.5, spent: backendTotal * 0.45 },
-            { name: "Transport", icon: "directions_car", allocated: backendTotal * 0.2, spent: backendTotal * 0.1 },
-          ];
-          
-          setBudgetCategories(categories);
-          setHasData(true);
-        }
-        
-        if (response && response.travel_request) {
-          setCurrentDestination(response.travel_request.destination);
-        }
-      }
-    }, (err) => {
-      console.error(err);
-      setError("An error occurred while planning your trip. The AI might have timed out.");
-      setIsLoading(false);
-    }, () => {
-      setIsLoading(false);
-    });
-  };
 
   return (
     <>

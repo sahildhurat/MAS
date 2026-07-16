@@ -16,7 +16,7 @@ export default function Hero() {
             Your Bespoke Itinerary is Ready.
           </h1>
           <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-            I've curated a bespoke experience blending modern luxury with exclusive tranquility, perfectly aligned with your preferences.
+            I&apos;ve curated a bespoke experience blending modern luxury with exclusive tranquility, perfectly aligned with your preferences.
           </p>
         </div>
       </div>
