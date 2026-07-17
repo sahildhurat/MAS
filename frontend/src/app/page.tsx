@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../components/layout/Header';
 import Hero from '../components/layout/Hero';
 import ChatInput from '../components/chat/ChatInput';
@@ -21,6 +21,13 @@ export default function Home() {
   const [chatHistory, setChatHistory] = useState<{role: 'user'|'ai', text: string}[]>([]);
   const ws = React.useRef<WebSocket | null>(null);
   const latestQuery = React.useRef<string>("");
+
+  // Auto-dismiss error toast after 8 seconds
+  useEffect(() => {
+    if (!error) return;
+    const timer = setTimeout(() => setError(null), 8000);
+    return () => clearTimeout(timer);
+  }, [error]);
 
   // Connect to the WebSocket on mount for global chatbot functionality
   function generateDashboard(query: string) {
@@ -120,6 +127,10 @@ export default function Home() {
           reconnectTimer = setTimeout(connect, 2000);
         }
       };
+
+      ws.current.onerror = (event) => {
+        console.error("WebSocket error", event);
+      };
     };
 
     connect();
@@ -164,8 +175,11 @@ export default function Home() {
         <Hero />
         
         {error && (
-          <div className="lg:col-span-12 p-4 bg-error-container text-on-error-container rounded-xl border border-error">
-            {error}
+          <div className="fixed top-24 left-1/2 -translate-x-1/2 z-[100] w-11/12 max-w-lg p-4 bg-error-container text-on-error-container rounded-xl border border-error shadow-xl flex items-center justify-between gap-4 animate-in fade-in slide-in-from-top-4">
+            <p className="font-body-md">{error}</p>
+            <button onClick={() => setError(null)} className="flex-shrink-0 p-1 rounded-full hover:bg-error/20 transition-colors flex items-center justify-center">
+              <span className="material-symbols-outlined">close</span>
+            </button>
           </div>
         )}
         
@@ -200,7 +214,7 @@ export default function Home() {
         </div>
       )}
 
-      <ChatInput onSubmit={handleUserInput} isLoading={isLoading} />
+      <ChatInput onSubmit={handleUserInput} isLoading={isLoading} onError={setError} />
     </>
   );
 }

@@ -20,8 +20,6 @@ export const planTripStream = (
   onError: (error: any) => void,
   onComplete: () => void
 ) => {
-  // Using native fetch API to handle SSE since axios doesn't support EventSource directly easily
-  // We'll POST the query and the backend returns text/event-stream
   fetch(`${API_BASE_URL}/api/v1/plan`, {
     method: 'POST',
     headers: {
@@ -30,6 +28,9 @@ export const planTripStream = (
     },
     body: JSON.stringify({ query })
   }).then(async (response) => {
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+    }
     if (!response.body) throw new Error("No response body");
     
     const reader = response.body.getReader();
@@ -44,19 +45,31 @@ export const planTripStream = (
       }
       
       buffer += decoder.decode(value, { stream: true });
-      const lines = buffer.split('\n\n');
+      // SSE events are separated by double newlines (handle both \r\n and \n)
+      const events = buffer.split(/\r?\n\r?\n/);
       
       // Keep the last partial chunk in the buffer
-      buffer = lines.pop() || "";
+      buffer = events.pop() || "";
       
-      for (const chunk of lines) {
-        if (chunk.startsWith("data: ")) {
+      for (const eventBlock of events) {
+        if (!eventBlock.trim()) continue;
+        
+        // Parse individual SSE lines within this event block
+        let dataStr = "";
+        for (const line of eventBlock.split(/\r?\n/)) {
+          if (line.startsWith("data:")) {
+            // Accumulate data lines (strip "data:" or "data: " prefix)
+            dataStr += line.slice(line.startsWith("data: ") ? 6 : 5);
+          }
+          // We ignore event:, id:, retry: lines since our event type is inside the data JSON
+        }
+        
+        if (dataStr) {
           try {
-            const dataStr = chunk.slice(6);
             const data = JSON.parse(dataStr);
             onMessage(data.event, data);
           } catch (e) {
-            console.error("Failed to parse SSE chunk", e);
+            console.error("Failed to parse SSE data", e, dataStr);
           }
         }
       }

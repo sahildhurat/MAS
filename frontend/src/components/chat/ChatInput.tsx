@@ -4,9 +4,10 @@ import { Loader2 } from 'lucide-react';
 export interface ChatInputProps {
   onSubmit: (query: string) => void;
   isLoading: boolean;
+  onError?: (error: string) => void;
 }
 
-export default function ChatInput({ onSubmit, isLoading }: ChatInputProps) {
+export default function ChatInput({ onSubmit, isLoading, onError }: ChatInputProps) {
   const [query, setQuery] = useState("");
   const [isListening, setIsListening] = useState(false);
 
@@ -19,23 +20,18 @@ export default function ChatInput({ onSubmit, isLoading }: ChatInputProps) {
   };
 
   const recognitionRef = React.useRef<any>(null);
+  const retryCountRef = React.useRef(0);
+  const MAX_RETRIES = 2;
 
-  const toggleListen = () => {
-    if (isListening) {
-      if (recognitionRef.current) {
-        recognitionRef.current.stop();
-      }
-      setIsListening(false);
-      return;
-    }
-    
+  const startRecognition = React.useCallback(() => {
     const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
     if (!SpeechRecognition) {
-      alert("Speech recognition is not supported in this browser. Please use Chrome or Edge.");
+      const msg = "Speech recognition is not supported in this browser. Please use Chrome or Edge.";
+      if (onError) onError(msg);
+      else alert(msg);
       return;
     }
 
-    setIsListening(true);
     const recognition = new SpeechRecognition();
     recognitionRef.current = recognition;
     recognition.continuous = false;
@@ -43,6 +39,7 @@ export default function ChatInput({ onSubmit, isLoading }: ChatInputProps) {
     recognition.lang = 'en-US';
 
     recognition.onresult = (event: any) => {
+      retryCountRef.current = 0;
       const transcript = event.results[0][0].transcript;
       setQuery(transcript);
       // Auto-submit voice query after a short delay to feel natural
@@ -54,14 +51,60 @@ export default function ChatInput({ onSubmit, isLoading }: ChatInputProps) {
 
     recognition.onerror = (event: any) => {
       console.error("Speech recognition error", event.error);
+      
+      if (event.error === 'aborted') {
+        // User or system cancelled — not a real error
+        return;
+      }
+      
+      if (event.error === 'network' && retryCountRef.current < MAX_RETRIES) {
+        // Chrome's SpeechRecognition can throw transient network errors — retry
+        retryCountRef.current++;
+        console.warn(`Retrying speech recognition (attempt ${retryCountRef.current}/${MAX_RETRIES})...`);
+        setTimeout(() => {
+          if (recognitionRef.current) {
+            try {
+              recognitionRef.current.start();
+            } catch {
+              setIsListening(false);
+              retryCountRef.current = 0;
+            }
+          }
+        }, 500);
+        return;
+      }
+      
       setIsListening(false);
-      if (event.error !== 'aborted') {
-        alert(`Microphone error: ${event.error}. Please ensure microphone permissions are granted.`);
+      retryCountRef.current = 0;
+
+      let errorMsg: string;
+      switch (event.error) {
+        case 'not-allowed':
+          errorMsg = "Microphone access was denied. Please allow microphone permissions in your browser settings.";
+          break;
+        case 'network':
+          errorMsg = "Could not reach speech recognition service. Please check your internet connection and try again.";
+          break;
+        case 'no-speech':
+          errorMsg = "No speech was detected. Please try again and speak clearly.";
+          break;
+        case 'audio-capture':
+          errorMsg = "No microphone was found. Please ensure a microphone is connected.";
+          break;
+        default:
+          errorMsg = `Microphone error: ${event.error}. Please ensure microphone permissions are granted.`;
+      }
+      
+      if (onError) {
+        onError(errorMsg);
       }
     };
 
     recognition.onend = () => {
-      setIsListening(false);
+      // Only reset listening if we're not retrying
+      if (retryCountRef.current === 0) {
+        setIsListening(false);
+      }
     };
 
     try {
@@ -69,7 +112,23 @@ export default function ChatInput({ onSubmit, isLoading }: ChatInputProps) {
     } catch (e) {
       console.error("Failed to start speech recognition", e);
       setIsListening(false);
+      retryCountRef.current = 0;
     }
+  }, [onSubmit, onError]);
+
+  const toggleListen = () => {
+    if (isListening) {
+      if (recognitionRef.current) {
+        recognitionRef.current.stop();
+      }
+      setIsListening(false);
+      retryCountRef.current = 0;
+      return;
+    }
+    
+    setIsListening(true);
+    retryCountRef.current = 0;
+    startRecognition();
   };
 
   return (
