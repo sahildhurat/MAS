@@ -19,116 +19,113 @@ export default function ChatInput({ onSubmit, isLoading, onError }: ChatInputPro
     }
   };
 
-  const recognitionRef = React.useRef<any>(null);
-  const retryCountRef = React.useRef(0);
-  const MAX_RETRIES = 2;
+  const mediaRecorderRef = React.useRef<MediaRecorder | null>(null);
+  const audioChunksRef = React.useRef<Blob[]>([]);
 
-  const startRecognition = React.useCallback(() => {
-    const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
-    if (!SpeechRecognition) {
-      const msg = "Speech recognition is not supported in this browser. Please use Chrome or Edge.";
-      if (onError) onError(msg);
-      else alert(msg);
-      return;
+  const stopRecording = React.useCallback(() => {
+    if (mediaRecorderRef.current && mediaRecorderRef.current.state === 'recording') {
+      mediaRecorderRef.current.stop();
     }
+  }, []);
 
-    const recognition = new SpeechRecognition();
-    recognitionRef.current = recognition;
-    recognition.continuous = false;
-    recognition.interimResults = false;
-    recognition.lang = 'en-US';
-
-    recognition.onresult = (event: any) => {
-      retryCountRef.current = 0;
-      const transcript = event.results[0][0].transcript;
-      setQuery(transcript);
-      // Auto-submit voice query after a short delay to feel natural
-      setTimeout(() => {
-        onSubmit(transcript);
-        setQuery("");
-      }, 500);
-    };
-
-    recognition.onerror = (event: any) => {
-      console.error("Speech recognition error", event.error);
-      
-      if (event.error === 'aborted') {
-        // User or system cancelled — not a real error
-        return;
-      }
-      
-      if (event.error === 'network' && retryCountRef.current < MAX_RETRIES) {
-        // Chrome's SpeechRecognition can throw transient network errors — retry
-        retryCountRef.current++;
-        console.warn(`Retrying speech recognition (attempt ${retryCountRef.current}/${MAX_RETRIES})...`);
-        setTimeout(() => {
-          if (recognitionRef.current) {
-            try {
-              recognitionRef.current.start();
-            } catch {
-              setIsListening(false);
-              retryCountRef.current = 0;
-            }
-          }
-        }, 500);
-        return;
-      }
-      
-      setIsListening(false);
-      retryCountRef.current = 0;
-
-      let errorMsg: string;
-      switch (event.error) {
-        case 'not-allowed':
-          errorMsg = "Microphone access was denied. Please allow microphone permissions in your browser settings.";
-          break;
-        case 'network':
-          errorMsg = "Could not reach speech recognition service. Please check your internet connection and try again.";
-          break;
-        case 'no-speech':
-          errorMsg = "No speech was detected. Please try again and speak clearly.";
-          break;
-        case 'audio-capture':
-          errorMsg = "No microphone was found. Please ensure a microphone is connected.";
-          break;
-        default:
-          errorMsg = `Microphone error: ${event.error}. Please ensure microphone permissions are granted.`;
-      }
-      
-      if (onError) {
-        onError(errorMsg);
-      }
-    };
-
-    recognition.onend = () => {
-      // Only reset listening if we're not retrying
-      if (retryCountRef.current === 0) {
-        setIsListening(false);
-      }
-    };
-
+  const startWhisperRecording = React.useCallback(async () => {
     try {
-      recognition.start();
-    } catch (e) {
-      console.error("Failed to start speech recognition", e);
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      audioChunksRef.current = [];
+
+      const mediaRecorder = new MediaRecorder(stream, {
+        mimeType: MediaRecorder.isTypeSupported('audio/webm;codecs=opus')
+          ? 'audio/webm;codecs=opus'
+          : 'audio/webm'
+      });
+      mediaRecorderRef.current = mediaRecorder;
+
+      mediaRecorder.ondataavailable = (event) => {
+        if (event.data.size > 0) {
+          audioChunksRef.current.push(event.data);
+        }
+      };
+
+      mediaRecorder.onstop = async () => {
+        // Stop all mic tracks
+        stream.getTracks().forEach(t => t.stop());
+
+        const audioBlob = new Blob(audioChunksRef.current, { type: 'audio/webm' });
+        if (audioBlob.size < 100) {
+          setIsListening(false);
+          return;
+        }
+
+        // Convert to base64 and send to Whisper backend
+        setQuery("Transcribing...");
+        try {
+          const reader = new FileReader();
+          const base64Promise = new Promise<string>((resolve, reject) => {
+            reader.onloadend = () => resolve(reader.result as string);
+            reader.onerror = reject;
+          });
+          reader.readAsDataURL(audioBlob);
+          const base64Data = await base64Promise;
+
+          const { transcribeAudio } = await import('../../lib/api');
+          const result = await transcribeAudio(base64Data);
+          const transcript = result.transcript?.trim();
+
+          if (transcript) {
+            setQuery(transcript);
+            setTimeout(() => {
+              onSubmit(transcript);
+              setQuery("");
+            }, 300);
+          } else {
+            setQuery("");
+            if (onError) onError("No speech was detected. Please try again and speak clearly.");
+          }
+        } catch (err) {
+          console.error("Whisper transcription failed", err);
+          setQuery("");
+          if (onError) onError("Voice transcription failed. Please try again or type your message.");
+        } finally {
+          setIsListening(false);
+        }
+      };
+
+      mediaRecorder.onerror = () => {
+        stream.getTracks().forEach(t => t.stop());
+        setIsListening(false);
+        if (onError) onError("Audio recording failed. Please check microphone permissions.");
+      };
+
+      mediaRecorder.start();
+      
+      // Auto-stop after 15 seconds to avoid excessively long recordings
+      setTimeout(() => {
+        if (mediaRecorder.state === 'recording') {
+          mediaRecorder.stop();
+        }
+      }, 15000);
+
+    } catch (err: any) {
       setIsListening(false);
-      retryCountRef.current = 0;
+      if (err.name === 'NotAllowedError') {
+        if (onError) onError("Microphone access was denied. Please allow microphone permissions in your browser settings.");
+      } else if (err.name === 'NotFoundError') {
+        if (onError) onError("No microphone was found. Please ensure a microphone is connected.");
+      } else {
+        if (onError) onError("Could not access microphone. Please check your browser settings.");
+      }
     }
   }, [onSubmit, onError]);
 
   const toggleListen = () => {
     if (isListening) {
-      if (recognitionRef.current) {
-        recognitionRef.current.stop();
-      }
+      stopRecording();
       setIsListening(false);
-      retryCountRef.current = 0;
       return;
     }
     
     setIsListening(true);
-    retryCountRef.current = 0;
-    startRecognition();
+    startWhisperRecording();
   };
 
   return (
