@@ -171,7 +171,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="flex-grow pt-24 md:pt-32 px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+      <main className="flex-grow pt-24 md:pt-32 px-margin-mobile md:px-margin-desktop md:pr-[400px] lg:pr-[440px] max-w-[1440px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-gutter">
         <Hero />
         
         {error && (
@@ -199,22 +199,53 @@ export default function Home() {
         )}
       </main>
       
-      {/* Floating Chat Transcript */}
-      {chatHistory.length > 0 && (
-        <div className="fixed bottom-[160px] md:bottom-[100px] left-0 right-0 px-margin-mobile md:px-margin-desktop z-30 max-w-[800px] mx-auto pointer-events-none">
-          <div className="bg-surface-container/90 backdrop-blur-md rounded-xl p-4 max-h-[300px] overflow-y-auto shadow-lg pointer-events-auto flex flex-col gap-3 scrollbar-hide">
-            {chatHistory.map((msg, i) => (
-              <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                <div className={`max-w-[85%] rounded-2xl px-4 py-2 ${msg.role === 'user' ? 'bg-primary text-on-primary rounded-br-sm' : 'bg-surface-variant text-on-surface-variant rounded-bl-sm'}`}>
-                  <p className="font-body-md">{msg.text}</p>
-                </div>
+      {/* Right-side Chat Panel (desktop) / Bottom sheet (mobile) */}
+      <aside className={`
+        fixed z-30
+        bottom-0 left-0 right-0
+        md:top-24 md:bottom-0 md:left-auto md:right-0 md:w-[380px] lg:w-[420px]
+        flex flex-col
+        pointer-events-none
+      `}>
+        {/* Chat messages */}
+        {chatHistory.length > 0 && (
+          <div className="flex-1 overflow-hidden pointer-events-auto hidden md:flex flex-col">
+            <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-3 scrollbar-hide bg-surface-container/80 backdrop-blur-xl border-l border-outline-variant/30">
+              <div className="flex items-center gap-2 pb-3 border-b border-outline-variant/30 mb-1">
+                <span className="material-symbols-outlined text-primary">smart_toy</span>
+                <h3 className="font-headline-md text-on-surface">AI Concierge</h3>
               </div>
-            ))}
+              {chatHistory.map((msg, i) => (
+                <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+                  <div className={`max-w-[85%] rounded-2xl px-4 py-2 ${msg.role === 'user' ? 'bg-primary text-on-primary rounded-br-sm' : 'bg-surface-variant text-on-surface-variant rounded-bl-sm'}`}>
+                    <p className="font-body-md">{msg.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      )}
+        )}
 
-      <ChatInput onSubmit={handleUserInput} isLoading={isLoading} onError={setError} />
+        {/* Mobile-only floating chat bubbles */}
+        {chatHistory.length > 0 && (
+          <div className="md:hidden px-margin-mobile pb-2 pointer-events-none">
+            <div className="bg-surface-container/90 backdrop-blur-md rounded-xl p-4 max-h-[200px] overflow-y-auto shadow-lg pointer-events-auto flex flex-col gap-3 scrollbar-hide">
+              {chatHistory.slice(-3).map((msg, i) => (
+                <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+                  <div className={`max-w-[85%] rounded-2xl px-4 py-2 ${msg.role === 'user' ? 'bg-primary text-on-primary rounded-br-sm' : 'bg-surface-variant text-on-surface-variant rounded-bl-sm'}`}>
+                    <p className="font-body-md">{msg.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Chat input — pinned to bottom of the panel */}
+        <div className="pointer-events-auto p-3 md:border-l md:border-t border-outline-variant/30 bg-surface-container/80 md:backdrop-blur-xl">
+          <ChatInput onSubmit={handleUserInput} isLoading={isLoading} onError={setError} />
+        </div>
+      </aside>
     </>
   );
 }

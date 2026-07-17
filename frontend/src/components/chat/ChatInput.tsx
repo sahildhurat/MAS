@@ -130,34 +130,32 @@ export default function ChatInput({ onSubmit, isLoading, onError }: ChatInputPro
 
   return (
     <>
-      <div className="fixed bottom-[88px] md:bottom-md left-0 right-0 px-margin-mobile md:px-margin-desktop z-40 max-w-[800px] mx-auto pointer-events-none">
-        <form onSubmit={handleSubmit} className="glass-floating rounded-xl p-2 flex items-center gap-2 pointer-events-auto shadow-2xl focus-within:border-primary transition-colors duration-300">
-          <button 
-            type="button" 
-            onClick={toggleListen}
-            className={`p-3 transition-colors ${isListening ? 'text-error animate-pulse' : 'text-on-surface-variant hover:text-primary'}`}
-          >
-            <span className="material-symbols-outlined">mic</span>
-          </button>
-          
-          <input 
-            className="flex-grow bg-transparent border-none outline-none text-on-surface placeholder-on-surface-variant/50 focus:ring-0 font-body-md text-body-md" 
-            placeholder={isListening ? "Listening..." : "Ask AI to plan your trip to anywhere..."}
-            type="text"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            disabled={isLoading || isListening}
-          />
-          
-          <button 
-            type="submit" 
-            disabled={isLoading || !query.trim()}
-            className="p-3 bg-primary-container text-on-primary-container rounded-lg hover:bg-primary transition-colors flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            {isLoading ? <Loader2 className="w-6 h-6 animate-spin" /> : <span className="material-symbols-outlined">send</span>}
-          </button>
-        </form>
-      </div>
+      <form onSubmit={handleSubmit} className="glass-floating rounded-xl p-2 flex items-center gap-2 shadow-2xl focus-within:border-primary transition-colors duration-300">
+        <button 
+          type="button" 
+          onClick={toggleListen}
+          className={`p-3 transition-colors ${isListening ? 'text-error animate-pulse' : 'text-on-surface-variant hover:text-primary'}`}
+        >
+          <span className="material-symbols-outlined">mic</span>
+        </button>
+        
+        <input 
+          className="flex-grow bg-transparent border-none outline-none text-on-surface placeholder-on-surface-variant/50 focus:ring-0 font-body-md text-body-md" 
+          placeholder={isListening ? "Listening..." : "Ask AI to plan your trip to anywhere..."}
+          type="text"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          disabled={isLoading || isListening}
+        />
+        
+        <button 
+          type="submit" 
+          disabled={isLoading || !query.trim()}
+          className="p-3 bg-primary-container text-on-primary-container rounded-lg hover:bg-primary transition-colors flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          {isLoading ? <Loader2 className="w-6 h-6 animate-spin" /> : <span className="material-symbols-outlined">send</span>}
+        </button>
+      </form>
       
       {/* BottomNavBar (Mobile) */}
       <nav className="md:hidden fixed bottom-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 backdrop-blur-xl bg-surface-container/80 rounded-t-xl shadow-xl">
