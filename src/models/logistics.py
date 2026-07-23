@@ -1,5 +1,5 @@
-from pydantic import BaseModel, Field
-from typing import Optional, List
+from pydantic import BaseModel
+from typing import Optional
 
 class AccommodationOption(BaseModel):
     name: str
@@ -18,7 +18,7 @@ class TransportSegment(BaseModel):
     notes: str
 
 class LogisticsPlan(BaseModel):
-    recommended_accommodation: list[AccommodationOption] = Field(default_factory=list)
-    alternative_accommodation: list[AccommodationOption] = Field(default_factory=list)
-    transport_recommendations: str = Field(default="")
-    route_optimization_notes: str = Field(default="")
+    recommended_accommodation: AccommodationOption
+    alternative_accommodation: list[AccommodationOption]
+    transport_recommendations: str
+    route_optimization_notes: str

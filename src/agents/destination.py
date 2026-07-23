@@ -1,4 +1,4 @@
-from langchain_groq import ChatGroq
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 from src.models.destination import DestinationReport
 from src.models.request import TravelRequest
@@ -8,7 +8,7 @@ from src.config import settings
 
 class DestinationResearchAgent:
     def __init__(self, llm=None, prompt_path=None):
-        self.llm = llm or ChatGroq(model=settings.groq_model, temperature=0, api_key=settings.groq_api_key)
+        self.llm = llm or ChatGoogleGenerativeAI(model=settings.gemini_model, temperature=0, api_key=settings.google_api_key)
             
         if not prompt_path:
             prompt_path = Path(__file__).parent.parent / "prompts" / "destination.md"

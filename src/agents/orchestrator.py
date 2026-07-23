@@ -1,4 +1,4 @@
-from langchain_groq import ChatGroq
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 from src.models.request import TravelRequest
 from pathlib import Path
@@ -12,7 +12,7 @@ class OrchestratorAgent:
     """
     def __init__(self, prompt_path: str = "src/prompts/orchestrator.md"):
         # We assume the key is provided via env var or settings
-        self.llm = ChatGroq(model=settings.groq_model, temperature=0, api_key=settings.groq_api_key)
+        self.llm = ChatGoogleGenerativeAI(model=settings.gemini_model, temperature=0, api_key=settings.google_api_key)
         with open(prompt_path, "r", encoding="utf-8") as f:
             self.system_prompt = f.read()
 

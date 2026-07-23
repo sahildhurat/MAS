@@ -1,4 +1,4 @@
-from langchain_groq import ChatGroq
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 from src.models.review import ReviewResult
 from src.models.request import TravelRequest
@@ -11,10 +11,10 @@ import json
 
 class ReviewAgent:
     def __init__(self, llm=None, prompt_path=None):
-        self.llm = llm or ChatGroq(
-            model=settings.groq_model,
+        self.llm = llm or ChatGoogleGenerativeAI(
+            model=settings.gemini_model,
             temperature=0,
-            api_key=settings.groq_api_key
+            api_key=settings.google_api_key
         )
         
         if not prompt_path:
