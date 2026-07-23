@@ -59,8 +59,9 @@ async def transcribe_audio(request: TranscribeRequest):
             'file': ('audio.webm', audio_bytes, 'audio/webm')
         }
         data = {
-            'model': 'whisper-large-v3-turbo', # Fast Whisper model
-            'language': 'en'
+            'model': 'whisper-large-v3', # More accurate than turbo
+            'language': 'en',
+            'prompt': "LuxeTravel AI, luxury travel, itinerary, budget, flights, hotels, booking, destination, let's go."
         }
         
         async with httpx.AsyncClient() as client:
