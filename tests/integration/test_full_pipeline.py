@@ -51,7 +51,7 @@ async def test_full_pipeline_success():
         assert isinstance(review_result.confidence_score, float)
         assert hasattr(review_result, "checks")
         assert len(itinerary.days) == final_state["travel_request"].duration_days
-        assert hasattr(itinerary, "total_cost_usd")
+        assert hasattr(itinerary, "total_cost_inr")
         
         # Ensure budget was somewhat coherent (not throwing errors)
         assert hasattr(itinerary, "accommodation")

@@ -11,9 +11,9 @@ import { planTripStream } from '../lib/api';
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
   const [hasData, setHasData] = useState(false);
-  const [itineraryDays, setItineraryDays] = useState<any[]>([]);
-  const [budgetTotal, setBudgetTotal] = useState(0);
-  const [budgetCategories, setBudgetCategories] = useState<BudgetCategory[]>([]);
+  const [itineraryData, setItineraryData] = useState<any>(null);
+  const [budgetData, setBudgetData] = useState<any>(null);
+  const [logisticsData, setLogisticsData] = useState<any>(null);
   const [error, setError] = useState<string | null>(null);
   const [streamProgress, setStreamProgress] = useState<string>("");
   const [currentDestination, setCurrentDestination] = useState<string>("");
@@ -46,32 +46,9 @@ export default function Home() {
       } else if (event === "complete") {
         const response = data.data;
         if (response && response.itinerary) {
-          const days = response.itinerary.days?.map((day: any) => ({
-            dayTitle: `Day ${day.day_number || day.day}: ${day.theme}`,
-            date: new Date(day.date || Date.now()).toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric' }),
-            activities: day.activities?.map((act: any) => ({
-              time: act.time,
-              icon: 'explore',
-              title: act.title,
-              description: act.description,
-              cost: act.estimated_cost_usd || 0,
-              crowdLevel: act.crowd_level || act.crowd_level_estimate || 'Low',
-              imageSrc: act.image_url || 'https://via.placeholder.com/150'
-            })) || []
-          })) || [];
-          
-          setItineraryDays(days);
-          
-          const backendTotal = response.itinerary.total_cost_usd || response.itinerary.total_estimated_cost_usd || 0;
-          setBudgetTotal(backendTotal);
-          
-          const categories = [
-            { name: "Dining", icon: "restaurant", allocated: backendTotal * 0.3, spent: backendTotal * 0.2 },
-            { name: "Activities", icon: "attractions", allocated: backendTotal * 0.5, spent: backendTotal * 0.45 },
-            { name: "Transport", icon: "directions_car", allocated: backendTotal * 0.2, spent: backendTotal * 0.1 },
-          ];
-          
-          setBudgetCategories(categories);
+          setItineraryData(response.itinerary);
+          setBudgetData(response.budget);
+          setLogisticsData(response.logistics);
           setHasData(true);
         }
         
@@ -158,7 +135,7 @@ export default function Home() {
     if (ws.current && ws.current.readyState === WebSocket.OPEN) {
       ws.current.send(JSON.stringify({
         question: query,
-        itinerary: hasData ? itineraryDays : null,
+        itinerary: hasData ? itineraryData : null,
         destination: currentDestination
       }));
     } else if (ws.current && ws.current.readyState === WebSocket.CONNECTING) {
@@ -168,12 +145,65 @@ export default function Home() {
     }
   };
 
+  // Transform itinerary data for display
+  const itineraryDays = itineraryData?.days?.map((day: any) => ({
+    dayTitle: `Day ${day.day_number || day.day}: ${day.theme}`,
+    date: day.date ? new Date(day.date).toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric' }) : `Day ${day.day_number}`,
+    dailyCostInr: day.daily_cost_inr || 0,
+    transportNotes: day.transport_notes || '',
+    activities: [
+      ...(day.activities?.map((act: any) => ({
+        time: act.time,
+        icon: getCategoryIcon(act.category),
+        title: act.title,
+        description: act.description,
+        cost: act.estimated_cost_inr || 0,
+        crowdLevel: act.crowd_level || 'Low',
+        duration: act.duration_minutes || 0,
+        tips: act.tips || [],
+        location: act.location || '',
+        isMeal: false
+      })) || []),
+      ...(day.meals?.map((meal: any) => ({
+        time: meal.time,
+        icon: 'restaurant',
+        title: meal.title,
+        description: meal.description,
+        cost: meal.estimated_cost_inr || 0,
+        crowdLevel: meal.crowd_level || 'Low',
+        duration: meal.duration_minutes || 0,
+        tips: meal.tips || [],
+        location: meal.location || '',
+        isMeal: true
+      })) || [])
+    ].sort((a: any, b: any) => {
+      // Sort by time string
+      const timeA = a.time?.replace(/[^0-9:]/g, '') || '';
+      const timeB = b.time?.replace(/[^0-9:]/g, '') || '';
+      return timeA.localeCompare(timeB);
+    })
+  })) || [];
+
+  // Transform budget data for display
+  const budgetCategories: BudgetCategory[] = budgetData?.categories?.map((cat: any) => ({
+    name: cat.category,
+    icon: getBudgetIcon(cat.category),
+    allocated: cat.allocated_inr || 0,
+    estimated: cat.estimated_inr || 0,
+    notes: cat.notes || ''
+  })) || [];
+
+  const budgetTotal = budgetData?.total_budget_inr || 0;
+  const budgetEstimated = budgetData?.total_estimated_inr || 0;
+  const budgetWarnings = budgetData?.warnings || [];
+  const budgetSuggestions = budgetData?.suggestions || [];
+  const withinBudget = budgetData?.within_budget ?? true;
 
   return (
     <>
       <Header />
       <main className="flex-grow pt-24 md:pt-32 px-margin-mobile md:px-margin-desktop md:pr-[400px] lg:pr-[440px] max-w-[1440px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-gutter">
-        <Hero />
+        <Hero destination={currentDestination} hasData={hasData} itineraryTitle={itineraryData?.title} itinerarySummary={itineraryData?.summary} />
         
         {error && (
           <div className="fixed top-24 left-1/2 -translate-x-1/2 z-[100] w-11/12 max-w-lg p-4 bg-error-container text-on-error-container rounded-xl border border-error shadow-xl flex items-center justify-between gap-4 animate-in fade-in slide-in-from-top-4">
@@ -194,8 +224,56 @@ export default function Home() {
         
         {hasData && !isLoading && (
           <>
+            {/* Accommodation Card */}
+            {itineraryData?.accommodation && (
+              <div className="lg:col-span-12 glass-panel rounded-xl p-lg mb-2">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                    <span className="material-symbols-outlined text-primary">hotel</span>
+                  </div>
+                  <div>
+                    <h3 className="font-headline-md text-on-surface">{itineraryData.accommodation.name}</h3>
+                    <p className="font-body-md text-on-surface-variant">{itineraryData.accommodation.neighborhood}</p>
+                  </div>
+                  <div className="ml-auto text-right">
+                    <span className="font-headline-md text-secondary-fixed">₹{itineraryData.accommodation.total_cost_inr?.toLocaleString('en-IN')}</span>
+                    <p className="font-label-sm text-on-surface-variant">total stay</p>
+                  </div>
+                </div>
+                {itineraryData.accommodation.notes && (
+                  <p className="font-body-md text-on-surface-variant">{itineraryData.accommodation.notes}</p>
+                )}
+              </div>
+            )}
+
             <ItineraryCard days={itineraryDays} />
-            <BudgetSummary totalAllocated={budgetTotal} categories={budgetCategories} />
+            <BudgetSummary
+              totalAllocated={budgetTotal}
+              totalEstimated={budgetEstimated}
+              categories={budgetCategories}
+              warnings={budgetWarnings}
+              suggestions={budgetSuggestions}
+              withinBudget={withinBudget}
+              destination={currentDestination}
+            />
+
+            {/* General Tips */}
+            {itineraryData?.general_tips && itineraryData.general_tips.length > 0 && (
+              <div className="lg:col-span-12 glass-panel rounded-xl p-lg mt-2">
+                <h3 className="font-headline-md text-on-surface flex items-center gap-2 mb-4">
+                  <span className="material-symbols-outlined text-primary">tips_and_updates</span>
+                  Travel Tips
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {itineraryData.general_tips.map((tip: string, i: number) => (
+                    <div key={i} className="flex items-start gap-3 p-3 rounded-lg bg-surface-variant/20">
+                      <span className="material-symbols-outlined text-primary text-[18px] mt-0.5">lightbulb</span>
+                      <p className="font-body-md text-on-surface-variant">{tip}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </>
         )}
       </main>
@@ -249,4 +327,29 @@ export default function Home() {
       </aside>
     </>
   );
+}
+
+function getCategoryIcon(category: string): string {
+  const lower = (category || '').toLowerCase();
+  if (lower.includes('food') || lower.includes('dining') || lower.includes('restaurant') || lower.includes('meal')) return 'restaurant';
+  if (lower.includes('culture') || lower.includes('museum') || lower.includes('heritage') || lower.includes('temple')) return 'museum';
+  if (lower.includes('shopping') || lower.includes('market')) return 'shopping_bag';
+  if (lower.includes('nature') || lower.includes('park') || lower.includes('beach') || lower.includes('garden')) return 'park';
+  if (lower.includes('nightlife') || lower.includes('bar') || lower.includes('club')) return 'nightlife';
+  if (lower.includes('adventure') || lower.includes('sport')) return 'hiking';
+  if (lower.includes('relaxation') || lower.includes('spa') || lower.includes('wellness')) return 'spa';
+  if (lower.includes('transport') || lower.includes('travel')) return 'directions_car';
+  if (lower.includes('sightseeing') || lower.includes('landmark')) return 'photo_camera';
+  return 'explore';
+}
+
+function getBudgetIcon(category: string): string {
+  const lower = (category || '').toLowerCase();
+  if (lower.includes('food') || lower.includes('dining') || lower.includes('meal')) return 'restaurant';
+  if (lower.includes('accommod') || lower.includes('hotel') || lower.includes('stay')) return 'hotel';
+  if (lower.includes('transport') || lower.includes('travel') || lower.includes('flight')) return 'directions_car';
+  if (lower.includes('activit') || lower.includes('sightseeing') || lower.includes('entertain')) return 'attractions';
+  if (lower.includes('buffer') || lower.includes('misc') || lower.includes('emergency')) return 'savings';
+  if (lower.includes('shopping')) return 'shopping_bag';
+  return 'payments';
 }

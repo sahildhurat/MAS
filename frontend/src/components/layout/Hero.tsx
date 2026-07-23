@@ -1,4 +1,11 @@
-export default function Hero() {
+export interface HeroProps {
+  destination?: string;
+  hasData?: boolean;
+  itineraryTitle?: string;
+  itinerarySummary?: string;
+}
+
+export default function Hero({ destination, hasData, itineraryTitle, itinerarySummary }: HeroProps) {
   return (
     <div className="lg:col-span-12 mb-lg glow-effect">
       <div className="glass-panel rounded-xl p-8 overflow-hidden relative min-h-[300px] flex items-end">
@@ -11,12 +18,14 @@ export default function Hero() {
           <div className="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
         </div>
         <div className="relative z-10 w-full">
-          <p className="font-label-md text-label-md text-primary tracking-widest uppercase mb-2">Welcome Back, Alexander</p>
+          <p className="font-label-md text-label-md text-primary tracking-widest uppercase mb-2">
+            {hasData && destination ? `Your ${destination} Adventure` : 'Welcome Back, Traveler'}
+          </p>
           <h1 className="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-4">
-            Your Bespoke Itinerary is Ready.
+            {hasData && itineraryTitle ? itineraryTitle : 'Your Bespoke Itinerary is Ready.'}
           </h1>
           <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-            I&apos;ve curated a bespoke experience blending modern luxury with exclusive tranquility, perfectly aligned with your preferences.
+            {hasData && itinerarySummary ? itinerarySummary : "I\u0027ve curated a bespoke experience blending modern luxury with exclusive tranquility, perfectly aligned with your preferences."}
           </p>
         </div>
       </div>

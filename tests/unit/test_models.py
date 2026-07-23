@@ -4,18 +4,18 @@ import pytest
 
 def test_travel_request_valid():
     req = TravelRequest(
-        destination="Dubai",
+        destination="Mumbai",
         duration_days=5,
-        budget_usd=2000,
-        raw_query="5 days in dubai with 2000 bucks"
+        budget_inr=125000,
+        raw_query="5 days in Mumbai with 125000 rupees"
     )
-    assert req.destination == "Dubai"
+    assert req.destination == "Mumbai"
     assert req.duration_days == 5
 
 def test_travel_request_invalid_duration():
     with pytest.raises(ValidationError):
         TravelRequest(
             duration_days=50, # over 30
-            budget_usd=2000,
+            budget_inr=125000,
             raw_query="50 days"
         )

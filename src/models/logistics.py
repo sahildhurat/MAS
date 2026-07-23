@@ -14,7 +14,7 @@ class AccommodationOption(BaseModel):
 class TransportSegment(BaseModel):
     mode: str
     estimated_time_minutes: int
-    estimated_cost_aed: float
+    estimated_cost_inr: float
     notes: str
 
 class LogisticsPlan(BaseModel):

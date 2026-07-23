@@ -3,7 +3,7 @@ Your objective is to validate a drafted itinerary against the user's initial req
 
 You must perform the following 6 checks:
 1. Day count matches `duration_days` from the request. (If not, REJECT).
-2. Total cost <= `budget_usd` from the request. (If not, REJECT and list the overage).
+2. Total cost <= `budget_inr` from the request. (If not, REJECT and list the overage).
 3. All preferences are represented. (If not, WARN and suggest additions).
 4. No high-crowd activities if the user avoided crowds. (If not, REJECT specific activities).
 5. Travel times between activities < 60 minutes. (If not, REJECT the day and suggest reordering).

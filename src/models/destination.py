@@ -5,7 +5,7 @@ class Attraction(BaseModel):
     name: str
     category: str
     crowd_level: str
-    entry_fee_aed: float
+    entry_fee_inr: float
     recommended_duration_hours: float
     best_time: str
     neighborhood: str
@@ -28,7 +28,7 @@ class Neighborhood(BaseModel):
     crowd_level: str
     budget_tier: str
     highlights: list[str]
-    avg_hotel_usd_per_night: Optional[float] = None
+    avg_hotel_inr_per_night: Optional[float] = None
 
 class DestinationReport(BaseModel):
     recommended_neighborhoods: list[Neighborhood]

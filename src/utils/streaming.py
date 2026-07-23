@@ -36,7 +36,7 @@ async def stream_plan(graph, query: str, request_obj=None) -> AsyncGenerator[str
                 # We can broadcast the completed agent
                 yield json.dumps({"event": "agent_completed", "agent": node_name})
                 
-        # Send final complete event
+        # Send final complete event with ALL data
         itinerary = accumulated_state.get("draft_itinerary")
         if itinerary:
             yield json.dumps({
@@ -45,6 +45,8 @@ async def stream_plan(graph, query: str, request_obj=None) -> AsyncGenerator[str
                     "travel_request": accumulated_state.get("travel_request").model_dump() if accumulated_state.get("travel_request") else None,
                     "itinerary": accumulated_state.get("draft_itinerary").model_dump() if accumulated_state.get("draft_itinerary") else None,
                     "budget": accumulated_state.get("budget_breakdown").model_dump() if accumulated_state.get("budget_breakdown") else None,
+                    "logistics": accumulated_state.get("logistics_plan").model_dump() if accumulated_state.get("logistics_plan") else None,
+                    "destination_report": accumulated_state.get("destination_report").model_dump() if accumulated_state.get("destination_report") else None,
                     "review_result": accumulated_state.get("review_result").model_dump() if accumulated_state.get("review_result") else None
                 }
             })
