@@ -136,7 +136,8 @@ export default function Home() {
       ws.current.send(JSON.stringify({
         question: query,
         itinerary: hasData ? itineraryData : null,
-        destination: currentDestination
+        destination: currentDestination,
+        chat_history: chatHistory // Send the existing history (before adding current query) so AI knows context
       }));
     } else if (ws.current && ws.current.readyState === WebSocket.CONNECTING) {
       setError("Chat server is connecting, please try again in a moment.");

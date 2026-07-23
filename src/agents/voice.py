@@ -22,15 +22,22 @@ class VoiceAgent:
             
         self.prompt = PromptTemplate(
             template=template,
-            input_variables=["itinerary_json", "question", "destination"]
+            input_variables=["itinerary_json", "question", "destination", "chat_history"]
         )
 
-    async def answer_followup(self, question: str, itinerary: dict, destination: str = "your destination") -> VoiceResponse:
+    async def answer_followup(self, question: str, itinerary: dict, destination: str = "your destination", chat_history: list = None) -> VoiceResponse:
         itinerary_json = json.dumps(itinerary, indent=2) if itinerary else "None"
+        
+        # Format chat history into a string
+        history_str = "No previous conversation."
+        if chat_history and len(chat_history) > 0:
+            history_str = "\n".join([f"{msg.get('role', 'unknown').capitalize()}: {msg.get('text', '')}" for msg in chat_history])
+            
         formatted_prompt = self.prompt.format(
             itinerary_json=itinerary_json,
             question=question,
-            destination=destination
+            destination=destination,
+            chat_history=history_str
         )
         
         # We manually parse the JSON to avoid Langchain's tool calling wrappers

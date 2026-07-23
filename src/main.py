@@ -100,10 +100,11 @@ async def websocket_voice_endpoint(websocket: WebSocket, session_id: str):
                 question = payload.get("question", "")
                 itinerary = payload.get("itinerary", {})
                 destination = payload.get("destination", "your destination")
+                chat_history = payload.get("chat_history", [])
                 
                 if question:
                     logger.info("Voice question received", session_id=session_id, question=question)
-                    voice_res = await voice_agent.answer_followup(question, itinerary, destination)
+                    voice_res = await voice_agent.answer_followup(question, itinerary, destination, chat_history)
                     
                     await websocket.send_json({
                         "response": voice_res.response,
