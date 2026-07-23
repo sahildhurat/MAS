@@ -1,7 +1,7 @@
 import json
 from langchain_core.prompts import PromptTemplate
 from pydantic import BaseModel, Field
-from langchain_groq import ChatGroq
+from langchain_google_genai import ChatGoogleGenerativeAI
 from src.config import settings
 
 class VoiceResponse(BaseModel):
@@ -10,7 +10,7 @@ class VoiceResponse(BaseModel):
 
 class VoiceAgent:
     def __init__(self, prompt_path: str = "src/prompts/voice.md"):
-        self.llm = ChatGroq(model=settings.groq_model, temperature=0.7, api_key=settings.groq_api_key)
+        self.llm = ChatGoogleGenerativeAI(model=settings.gemini_model, temperature=0.7, api_key=settings.google_api_key)
         with open(prompt_path, "r", encoding="utf-8") as f:
             template = f.read()
             
