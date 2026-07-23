@@ -14,7 +14,7 @@ logistics_agent = LogisticsAgent()
 budget_agent = BudgetAgent()
 review_agent = ReviewAgent()
 
-@with_timeout(60)
+@with_timeout(120)
 async def parse_request_node(state: PlannerState) -> dict:
     raw_query = state.get("raw_query", "")
     logger.info("Agent started", agent_name="parse_request", input_summary=raw_query[:50])
@@ -26,7 +26,7 @@ async def parse_request_node(state: PlannerState) -> dict:
         logger.warning("Error / fallback", error_type=type(e).__name__, fallback_used="None")
         return {"error": f"Failed to parse request: {str(e)}"}
 
-@with_timeout(90)
+@with_timeout(180)
 async def destination_node(state: PlannerState) -> dict:
     req = state.get("travel_request")
     if not req:
@@ -40,7 +40,7 @@ async def destination_node(state: PlannerState) -> dict:
         logger.warning("Error / fallback", error_type=type(e).__name__, fallback_used="None")
         return {"error": f"Destination agent failed: {str(e)}"}
 
-@with_timeout(90)
+@with_timeout(180)
 async def logistics_node(state: PlannerState) -> dict:
     req = state.get("travel_request")
     dest = state.get("destination_report")
@@ -55,7 +55,7 @@ async def logistics_node(state: PlannerState) -> dict:
         logger.warning("Error / fallback", error_type=type(e).__name__, fallback_used="None")
         return {"error": f"Logistics agent failed: {str(e)}"}
 
-@with_timeout(90)
+@with_timeout(180)
 async def budget_node(state: PlannerState) -> dict:
     req = state.get("travel_request")
     if not req:
@@ -69,7 +69,7 @@ async def budget_node(state: PlannerState) -> dict:
         logger.warning("Error / fallback", error_type=type(e).__name__, fallback_used="None")
         return {"error": f"Budget agent failed: {str(e)}"}
 
-@with_timeout(90)
+@with_timeout(300)
 async def assemble_itinerary_node(state: PlannerState) -> dict:
     req = state.get("travel_request")
     dest = state.get("destination_report")
@@ -102,7 +102,7 @@ async def assemble_itinerary_node(state: PlannerState) -> dict:
         logger.warning("Error / fallback", error_type=type(e).__name__, fallback_used="None")
         return {"error": f"Assembly failed: {str(e)}"}
 
-@with_timeout(60)
+@with_timeout(180)
 async def review_node(state: PlannerState) -> dict:
     itinerary = state.get("draft_itinerary")
     req = state.get("travel_request")
