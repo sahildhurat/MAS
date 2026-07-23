@@ -1,7 +1,7 @@
 import json
 from langchain_core.prompts import PromptTemplate
 from pydantic import BaseModel, Field
-from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_groq import ChatGroq
 from src.config import settings
 
 class VoiceResponse(BaseModel):
@@ -10,7 +10,13 @@ class VoiceResponse(BaseModel):
 
 class VoiceAgent:
     def __init__(self, prompt_path: str = "src/prompts/voice.md"):
-        self.llm = ChatGoogleGenerativeAI(model=settings.gemini_model, temperature=0.7, api_key=settings.google_api_key)
+        # Use Groq for ultra-fast voice responses, with JSON mode to guarantee valid output
+        self.llm = ChatGroq(
+            model=settings.groq_model, 
+            temperature=0.7, 
+            api_key=settings.groq_api_key
+        ).bind(response_format={"type": "json_object"})
+        
         with open(prompt_path, "r", encoding="utf-8") as f:
             template = f.read()
             
@@ -27,6 +33,19 @@ class VoiceAgent:
             destination=destination
         )
         
-        llm_with_tool = self.llm.with_structured_output(VoiceResponse)
-        result = await llm_with_tool.ainvoke(formatted_prompt)
-        return result
+        # We manually parse the JSON to avoid Langchain's tool calling wrappers
+        # which sometimes fail on Groq's smaller models
+        result = await self.llm.ainvoke(formatted_prompt)
+        
+        try:
+            parsed = json.loads(result.content)
+            return VoiceResponse(
+                response=parsed.get("response", "I'm sorry, I couldn't understand that."),
+                trigger_planner=parsed.get("trigger_planner", False)
+            )
+        except Exception:
+            # Fallback if parsing fails
+            return VoiceResponse(
+                response="I'm having trouble processing that right now.",
+                trigger_planner=False
+            )
