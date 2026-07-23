@@ -69,7 +69,7 @@ async def budget_node(state: PlannerState) -> dict:
         logger.warning("Error / fallback", error_type=type(e).__name__, fallback_used="None")
         return {"error": f"Budget agent failed: {str(e)}"}
 
-@with_timeout(30)
+@with_timeout(90)
 async def assemble_itinerary_node(state: PlannerState) -> dict:
     req = state.get("travel_request")
     dest = state.get("destination_report")
