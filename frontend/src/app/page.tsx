@@ -111,6 +111,7 @@ export default function Home() {
           const utterance = new SpeechSynthesisUtterance(data.response);
           utterance.rate = 1.0;
           utterance.pitch = 1.0;
+          utterance.lang = 'en-US';
           window.speechSynthesis.speak(utterance);
           
           // If the AI determined this is a trip planning request, trigger the heavy background task

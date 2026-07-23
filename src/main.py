@@ -59,7 +59,8 @@ async def transcribe_audio(request: TranscribeRequest):
             'file': ('audio.webm', audio_bytes, 'audio/webm')
         }
         data = {
-            'model': 'whisper-large-v3-turbo' # Fast Whisper model
+            'model': 'whisper-large-v3-turbo', # Fast Whisper model
+            'language': 'en'
         }
         
         async with httpx.AsyncClient() as client:

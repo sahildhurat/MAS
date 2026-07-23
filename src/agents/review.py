@@ -12,7 +12,7 @@ import json
 class ReviewAgent:
     def __init__(self, llm=None, prompt_path=None):
         self.llm = llm or ChatGroq(
-            model="llama-3.3-70b-versatile",
+            model=settings.groq_model,
             temperature=0,
             api_key=settings.groq_api_key
         )

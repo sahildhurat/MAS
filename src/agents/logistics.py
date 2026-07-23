@@ -10,7 +10,7 @@ import json
 
 class LogisticsAgent:
     def __init__(self, llm=None, prompt_path=None):
-        self.llm = llm or ChatGroq(model="llama-3.3-70b-versatile", temperature=0, api_key=settings.groq_api_key)
+        self.llm = llm or ChatGroq(model=settings.groq_model, temperature=0, api_key=settings.groq_api_key)
         
         if not prompt_path:
             prompt_path = Path(__file__).parent.parent / "prompts" / "logistics.md"
