@@ -84,11 +84,11 @@ export default function BudgetSummary({ totalAllocated, totalEstimated, categori
                           step={500}
                           value={editValue}
                           onChange={(e) => setEditValue(parseInt(e.target.value))}
-                          className="w-24 accent-primary"
+                          onMouseUp={() => handleEditSubmit(cat.name)}
+                          onTouchEnd={() => handleEditSubmit(cat.name)}
+                          className="w-20 sm:w-24 accent-primary"
                         />
                         <span className="text-on-surface font-semibold w-[4.5rem] text-right whitespace-nowrap">₹{editValue.toLocaleString('en-IN')}</span>
-                        <button onClick={() => handleEditSubmit(cat.name)} className="material-symbols-outlined text-primary text-[18px] hover:scale-110 transition-transform cursor-pointer shrink-0" title="Apply">check_circle</button>
-                        <button onClick={() => setEditingCategory(null)} className="material-symbols-outlined text-error text-[18px] hover:scale-110 transition-transform cursor-pointer shrink-0" title="Cancel">cancel</button>
                       </div>
                     ) : (
                       <span 
