@@ -204,7 +204,9 @@ export default function Home() {
     <>
       <Header />
       <main className="flex-grow pt-24 md:pt-32 px-margin-mobile md:px-margin-desktop md:pr-[400px] lg:pr-[440px] max-w-[1440px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-gutter">
-        <Hero destination={currentDestination} hasData={hasData} itineraryTitle={itineraryData?.title} itinerarySummary={itineraryData?.summary} />
+        <div id="explore" className="contents">
+          <Hero destination={currentDestination} hasData={hasData} itineraryTitle={itineraryData?.title} itinerarySummary={itineraryData?.summary} />
+        </div>
         
         {error && (
           <div className="fixed top-24 left-1/2 -translate-x-1/2 z-[100] w-11/12 max-w-lg p-4 bg-error-container text-on-error-container rounded-xl border border-error shadow-xl flex items-center justify-between gap-4 animate-in fade-in slide-in-from-top-4">
@@ -247,8 +249,11 @@ export default function Home() {
               </div>
             )}
 
-            <ItineraryCard days={itineraryDays} />
-            <BudgetSummary
+            <div id="itinerary" className="contents">
+              <ItineraryCard days={itineraryDays} />
+            </div>
+            <div id="budget" className="contents">
+              <BudgetSummary
               totalAllocated={budgetTotal}
               totalEstimated={budgetEstimated}
               categories={budgetCategories}
@@ -260,6 +265,7 @@ export default function Home() {
                 handleUserInput(`I want to adjust my budget for ${category} to ₹${newAmount}. Please update the recommendations accordingly.`);
               }}
             />
+            </div>
 
             {/* General Tips */}
             {itineraryData?.general_tips && itineraryData.general_tips.length > 0 && (
@@ -283,7 +289,7 @@ export default function Home() {
       </main>
       
       {/* Right-side Chat Panel (desktop) / Bottom sheet (mobile) */}
-      <aside className={`
+      <aside id="concierge" className={`
         fixed z-30
         bottom-0 left-0 right-0
         md:top-24 md:bottom-0 md:left-auto md:right-0 md:w-[380px] lg:w-[420px]

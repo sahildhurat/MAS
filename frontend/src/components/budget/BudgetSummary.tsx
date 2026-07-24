@@ -22,18 +22,17 @@ export interface BudgetSummaryProps {
 export default function BudgetSummary({ totalAllocated, totalEstimated, categories, warnings, suggestions, withinBudget, destination, onBudgetUpdate }: BudgetSummaryProps) {
   const [ledgerOpen, setLedgerOpen] = useState(false);
   const [editingCategory, setEditingCategory] = useState<string | null>(null);
-  const [editValue, setEditValue] = useState<string>('');
+  const [editValue, setEditValue] = useState<number>(0);
 
   const handleEditStart = (categoryName: string, currentValue: number) => {
     setEditingCategory(categoryName);
-    setEditValue(currentValue.toString());
+    setEditValue(currentValue);
   };
 
   const handleEditSubmit = (categoryName: string) => {
     if (onBudgetUpdate) {
-      const numValue = parseInt(editValue, 10);
-      if (!isNaN(numValue)) {
-        onBudgetUpdate(categoryName, numValue);
+      if (!isNaN(editValue)) {
+        onBudgetUpdate(categoryName, editValue);
       }
     }
     setEditingCategory(null);
@@ -77,20 +76,19 @@ export default function BudgetSummary({ totalAllocated, totalEstimated, categori
                     <span>₹{cat.estimated.toLocaleString('en-IN')}</span>
                     <span className="text-outline-variant mx-1">/</span>
                     {editingCategory === cat.name ? (
-                      <div className="flex items-center gap-1">
-                        <span className="text-on-surface">₹</span>
+                      <div className="flex items-center gap-2">
                         <input 
-                          type="number"
-                          autoFocus
+                          type="range"
+                          min={Math.max(0, cat.estimated - 10000)}
+                          max={Math.max(cat.allocated * 2, cat.estimated + 20000, 10000)}
+                          step={500}
                           value={editValue}
-                          onChange={(e) => setEditValue(e.target.value)}
-                          onKeyDown={(e) => {
-                            if (e.key === 'Enter') handleEditSubmit(cat.name);
-                            if (e.key === 'Escape') setEditingCategory(null);
-                          }}
-                          onBlur={() => handleEditSubmit(cat.name)}
-                          className="w-24 bg-surface text-on-surface border border-outline rounded px-1 py-0.5 text-sm focus:outline-none focus:border-primary"
+                          onChange={(e) => setEditValue(parseInt(e.target.value))}
+                          className="w-24 accent-primary"
                         />
+                        <span className="text-on-surface font-semibold w-[4.5rem] text-right whitespace-nowrap">₹{editValue.toLocaleString('en-IN')}</span>
+                        <button onClick={() => handleEditSubmit(cat.name)} className="material-symbols-outlined text-primary text-[18px] hover:scale-110 transition-transform cursor-pointer shrink-0" title="Apply">check_circle</button>
+                        <button onClick={() => setEditingCategory(null)} className="material-symbols-outlined text-error text-[18px] hover:scale-110 transition-transform cursor-pointer shrink-0" title="Cancel">cancel</button>
                       </div>
                     ) : (
                       <span 

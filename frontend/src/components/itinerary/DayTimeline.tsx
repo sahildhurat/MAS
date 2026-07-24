@@ -16,9 +16,6 @@ export default function DayTimeline({ dayTitle, date, activities, dailyCostInr, 
         <div>
           <h2 className="font-headline-lg text-headline-lg text-on-surface flex items-center gap-sm">
             {dayTitle}
-            <button className="glass-floating rounded-full p-2 text-primary hover:text-primary-container transition-colors shadow-lg group">
-              <span className="material-symbols-outlined group-hover:scale-110 transition-transform">mic</span>
-            </button>
           </h2>
           <p className="font-body-md text-body-md text-on-surface-variant mt-1">{date}</p>
         </div>
