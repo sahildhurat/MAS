@@ -5,17 +5,14 @@ from src.models.request import TravelRequest
 from src.models.budget import BudgetBreakdown
 from src.models.itinerary import Itinerary
 from pathlib import Path
+from src.utils.groq_rotator import get_rotator
 from src.config import settings
 from src.utils.decorators import safe_llm_call
 import json
 
 class ReviewAgent:
     def __init__(self, llm=None, prompt_path=None):
-        self.llm = llm or ChatGroq(
-            model=settings.groq_planner_model,
-            temperature=0,
-            api_key=settings.groq_api_key
-        )
+        self.llm = llm or get_rotator().get_llm(model=settings.groq_planner_model)
         
         if not prompt_path:
             prompt_path = Path(__file__).parent.parent / "prompts" / "review.md"

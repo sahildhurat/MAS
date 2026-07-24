@@ -1,8 +1,8 @@
-from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
 from src.models.request import TravelRequest
 from pathlib import Path
 from src.utils.decorators import safe_llm_call
+from src.utils.groq_rotator import get_rotator
 from src.config import settings
 
 class OrchestratorAgent:
@@ -11,8 +11,8 @@ class OrchestratorAgent:
     Phase 2+: Will also assemble itinerary and handle retries.
     """
     def __init__(self, prompt_path: str = "src/prompts/orchestrator.md"):
-        # Use Groq for fast and reliable structured output
-        self.llm = ChatGroq(model=settings.groq_planner_model, temperature=0, api_key=settings.groq_api_key)
+        # Use Groq with key rotation for fast and reliable structured output
+        self.llm = get_rotator().get_llm(model=settings.groq_planner_model)
         with open(prompt_path, "r", encoding="utf-8") as f:
             self.system_prompt = f.read()
 

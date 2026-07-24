@@ -2,6 +2,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
     groq_api_key: str = ""
+    groq_api_keys: str = ""  # Comma-separated list of Groq API keys for rotation
     google_api_key: str = ""
     serper_api_key: str = ""
     groq_model: str = "llama-3.1-8b-instant"

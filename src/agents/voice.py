@@ -1,7 +1,7 @@
 import json
 from langchain_core.prompts import PromptTemplate
 from pydantic import BaseModel, Field
-from langchain_groq import ChatGroq
+from src.utils.groq_rotator import get_rotator
 from src.config import settings
 
 class VoiceResponse(BaseModel):
@@ -11,10 +11,9 @@ class VoiceResponse(BaseModel):
 class VoiceAgent:
     def __init__(self, prompt_path: str = "src/prompts/voice.md"):
         # Use Groq for ultra-fast voice responses, with JSON mode to guarantee valid output
-        self.llm = ChatGroq(
-            model=settings.groq_model, 
-            temperature=0.7, 
-            api_key=settings.groq_api_key
+        self.llm = get_rotator().get_llm(
+            model=settings.groq_model,
+            temperature=0.7,
         ).bind(response_format={"type": "json_object"})
         
         with open(prompt_path, "r", encoding="utf-8") as f:

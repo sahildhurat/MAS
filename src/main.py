@@ -65,9 +65,10 @@ async def transcribe_audio(request: TranscribeRequest):
         }
         
         async with httpx.AsyncClient() as client:
+            from src.utils.groq_rotator import get_rotator
             response = await client.post(
                 "https://api.groq.com/openai/v1/audio/transcriptions",
-                headers={"Authorization": f"Bearer {settings.groq_api_key}"},
+                headers={"Authorization": f"Bearer {get_rotator().current_key}"},
                 data=data,
                 files=files,
                 timeout=30.0
