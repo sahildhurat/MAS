@@ -16,10 +16,28 @@ export interface BudgetSummaryProps {
   suggestions: string[];
   withinBudget: boolean;
   destination: string;
+  onBudgetUpdate?: (category: string, newAmount: number) => void;
 }
 
-export default function BudgetSummary({ totalAllocated, totalEstimated, categories, warnings, suggestions, withinBudget, destination }: BudgetSummaryProps) {
+export default function BudgetSummary({ totalAllocated, totalEstimated, categories, warnings, suggestions, withinBudget, destination, onBudgetUpdate }: BudgetSummaryProps) {
   const [ledgerOpen, setLedgerOpen] = useState(false);
+  const [editingCategory, setEditingCategory] = useState<string | null>(null);
+  const [editValue, setEditValue] = useState<string>('');
+
+  const handleEditStart = (categoryName: string, currentValue: number) => {
+    setEditingCategory(categoryName);
+    setEditValue(currentValue.toString());
+  };
+
+  const handleEditSubmit = (categoryName: string) => {
+    if (onBudgetUpdate) {
+      const numValue = parseInt(editValue, 10);
+      if (!isNaN(numValue)) {
+        onBudgetUpdate(categoryName, numValue);
+      }
+    }
+    setEditingCategory(null);
+  };
 
   return (
     <aside className="lg:col-span-4 flex flex-col gap-lg mt-lg lg:mt-0">
@@ -50,14 +68,43 @@ export default function BudgetSummary({ totalAllocated, totalEstimated, categori
             const isOver = cat.estimated > cat.allocated;
             return (
               <div key={idx}>
-                <div className="flex justify-between text-sm mb-2">
-                  <span className="font-label-md text-label-md text-on-surface flex items-center gap-2">
-                    <span className="material-symbols-outlined text-[16px] text-primary">{cat.icon}</span> 
-                    {cat.name}
+                <div className="flex flex-col sm:flex-row sm:items-end justify-between text-sm mb-2 gap-1">
+                  <span className="font-label-md text-label-md text-on-surface flex items-center gap-2 truncate">
+                    <span className="material-symbols-outlined text-[16px] text-primary shrink-0">{cat.icon}</span> 
+                    <span className="truncate">{cat.name}</span>
                   </span>
-                  <span className={`font-body-md text-body-md ${isOver ? 'text-error' : 'text-on-surface-variant'}`}>
-                    ₹{cat.estimated.toLocaleString('en-IN')} / ₹{cat.allocated.toLocaleString('en-IN')}
-                  </span>
+                  <div className={`font-body-md text-body-md flex items-center whitespace-nowrap gap-1 ${isOver ? 'text-error' : 'text-on-surface-variant'}`}>
+                    <span>₹{cat.estimated.toLocaleString('en-IN')}</span>
+                    <span className="text-outline-variant mx-1">/</span>
+                    {editingCategory === cat.name ? (
+                      <div className="flex items-center gap-1">
+                        <span className="text-on-surface">₹</span>
+                        <input 
+                          type="number"
+                          autoFocus
+                          value={editValue}
+                          onChange={(e) => setEditValue(e.target.value)}
+                          onKeyDown={(e) => {
+                            if (e.key === 'Enter') handleEditSubmit(cat.name);
+                            if (e.key === 'Escape') setEditingCategory(null);
+                          }}
+                          onBlur={() => handleEditSubmit(cat.name)}
+                          className="w-24 bg-surface text-on-surface border border-outline rounded px-1 py-0.5 text-sm focus:outline-none focus:border-primary"
+                        />
+                      </div>
+                    ) : (
+                      <span 
+                        onClick={() => { if (onBudgetUpdate) handleEditStart(cat.name, cat.allocated); }} 
+                        className={`flex items-center gap-1 ${onBudgetUpdate ? 'cursor-pointer hover:text-primary transition-colors group' : ''}`}
+                        title={onBudgetUpdate ? "Click to adjust budget" : ""}
+                      >
+                        <span>₹{cat.allocated.toLocaleString('en-IN')}</span>
+                        {onBudgetUpdate && (
+                           <span className="material-symbols-outlined text-[14px] opacity-0 group-hover:opacity-100 transition-opacity">edit</span>
+                        )}
+                      </span>
+                    )}
+                  </div>
                 </div>
                 <div className="h-2 w-full bg-[#1A1A1C] rounded-full overflow-hidden">
                   <div className={`h-full rounded-full ${isOver ? 'bg-error' : 'neon-gradient'}`} style={{ width: `${percentage}%` }}></div>

@@ -256,6 +256,9 @@ export default function Home() {
               suggestions={budgetSuggestions}
               withinBudget={withinBudget}
               destination={currentDestination}
+              onBudgetUpdate={(category, newAmount) => {
+                handleUserInput(`I want to adjust my budget for ${category} to ₹${newAmount}. Please update the recommendations accordingly.`);
+              }}
             />
 
             {/* General Tips */}
