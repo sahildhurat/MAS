@@ -151,3 +151,33 @@
 .neon-gradient {
     background: linear-gradient(90deg, #00d1ff 0%, #ffe16d 100%);
 }
+
+/* Budget slider thumb styling */
+.budget-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    border: 2px solid var(--color-surface);
+    box-shadow: 0 0 8px rgba(76, 214, 255, 0.4);
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.budget-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.3);
+    box-shadow: 0 0 14px rgba(76, 214, 255, 0.6);
+}
+.budget-slider::-webkit-slider-thumb:active {
+    transform: scale(1.1);
+}
+.budget-slider::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    border: 2px solid var(--color-surface);
+    box-shadow: 0 0 8px rgba(76, 214, 255, 0.4);
+    cursor: pointer;
+}

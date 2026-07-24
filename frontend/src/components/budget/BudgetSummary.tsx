@@ -61,52 +61,54 @@ export default function BudgetSummary({ totalAllocated, totalEstimated, categori
           )}
         </div>
         
-        <div className="space-y-6">
+        <div className="space-y-5">
           {categories.map((cat, idx) => {
             const percentage = cat.allocated > 0 ? Math.min((cat.estimated / cat.allocated) * 100, 100) : 0;
             const isOver = cat.estimated > cat.allocated;
+            const sliderValue = editingCategory === cat.name ? editValue : cat.allocated;
+            const sliderMax = Math.max(cat.allocated * 3, cat.estimated + 50000, 20000);
             return (
               <div key={idx}>
-                <div className="flex flex-col sm:flex-row sm:items-end justify-between text-sm mb-2 gap-1">
+                <div className="flex items-center justify-between mb-1.5">
                   <span className="font-label-md text-label-md text-on-surface flex items-center gap-2 truncate">
                     <span className="material-symbols-outlined text-[16px] text-primary shrink-0">{cat.icon}</span> 
                     <span className="truncate">{cat.name}</span>
                   </span>
-                  <div className={`font-body-md text-body-md flex items-center whitespace-nowrap gap-1 ${isOver ? 'text-error' : 'text-on-surface-variant'}`}>
-                    <span>₹{cat.estimated.toLocaleString('en-IN')}</span>
+                  <span className={`font-body-md text-body-md whitespace-nowrap ${isOver ? 'text-error' : 'text-on-surface-variant'}`}>
+                    ₹{cat.estimated.toLocaleString('en-IN')}
                     <span className="text-outline-variant mx-1">/</span>
-                    {editingCategory === cat.name ? (
-                      <div className="flex items-center gap-2">
-                        <input 
-                          type="range"
-                          min={Math.max(0, cat.estimated - 10000)}
-                          max={Math.max(cat.allocated * 2, cat.estimated + 20000, 10000)}
-                          step={500}
-                          value={editValue}
-                          onChange={(e) => setEditValue(parseInt(e.target.value))}
-                          onMouseUp={() => handleEditSubmit(cat.name)}
-                          onTouchEnd={() => handleEditSubmit(cat.name)}
-                          className="w-20 sm:w-24 accent-primary"
-                        />
-                        <span className="text-on-surface font-semibold w-[4.5rem] text-right whitespace-nowrap">₹{editValue.toLocaleString('en-IN')}</span>
-                      </div>
-                    ) : (
-                      <span 
-                        onClick={() => { if (onBudgetUpdate) handleEditStart(cat.name, cat.allocated); }} 
-                        className={`flex items-center gap-1 ${onBudgetUpdate ? 'cursor-pointer hover:text-primary transition-colors group' : ''}`}
-                        title={onBudgetUpdate ? "Click to adjust budget" : ""}
-                      >
-                        <span>₹{cat.allocated.toLocaleString('en-IN')}</span>
-                        {onBudgetUpdate && (
-                           <span className="material-symbols-outlined text-[14px] opacity-0 group-hover:opacity-100 transition-opacity">edit</span>
-                        )}
-                      </span>
-                    )}
-                  </div>
+                    <span className="text-on-surface font-semibold">₹{sliderValue.toLocaleString('en-IN')}</span>
+                  </span>
                 </div>
-                <div className="h-2 w-full bg-[#1A1A1C] rounded-full overflow-hidden">
-                  <div className={`h-full rounded-full ${isOver ? 'bg-error' : 'neon-gradient'}`} style={{ width: `${percentage}%` }}></div>
-                </div>
+                {/* Slider as the main interactive budget bar */}
+                <input
+                  type="range"
+                  min={0}
+                  max={sliderMax}
+                  step={500}
+                  value={sliderValue}
+                  onChange={(e) => {
+                    const val = parseInt(e.target.value);
+                    setEditingCategory(cat.name);
+                    setEditValue(val);
+                  }}
+                  onMouseUp={() => {
+                    if (editingCategory === cat.name && onBudgetUpdate) {
+                      onBudgetUpdate(cat.name, editValue);
+                    }
+                    setEditingCategory(null);
+                  }}
+                  onTouchEnd={() => {
+                    if (editingCategory === cat.name && onBudgetUpdate) {
+                      onBudgetUpdate(cat.name, editValue);
+                    }
+                    setEditingCategory(null);
+                  }}
+                  className="w-full h-2 rounded-full appearance-none cursor-pointer budget-slider"
+                  style={{
+                    background: `linear-gradient(90deg, ${isOver ? 'var(--color-error)' : 'var(--color-primary)'} 0%, ${isOver ? 'var(--color-error)' : 'var(--color-secondary-fixed)'} ${percentage}%, var(--color-surface-container-highest) ${percentage}%)`,
+                  }}
+                />
               </div>
             );
           })}
