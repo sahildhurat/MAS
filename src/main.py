@@ -13,8 +13,9 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",
-        "https://mas-git-main-spd2.vercel.app"
+        "http://127.0.0.1:3000"
     ],
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -58,9 +59,6 @@ async def transcribe_audio(request: TranscribeRequest):
             
         audio_bytes = base64.b64decode(b64_data)
         
-        files = {
-            'file': ('audio.webm', audio_bytes, 'audio/webm')
-        }
         data = {
             'model': 'whisper-large-v3', # More accurate than turbo
             'language': 'en',
@@ -69,16 +67,32 @@ async def transcribe_audio(request: TranscribeRequest):
         
         async with httpx.AsyncClient() as client:
             from src.utils.groq_rotator import get_rotator
-            response = await client.post(
-                "https://api.groq.com/openai/v1/audio/transcriptions",
-                headers={"Authorization": f"Bearer {get_rotator().current_key}"},
-                data=data,
-                files=files,
-                timeout=30.0
-            )
-            response.raise_for_status()
-            result = response.json()
-            return {"transcript": result.get("text", "")}
+            rotator = get_rotator()
+            
+            # Retry loop for rate limits
+            for attempt in range(3):
+                files = {
+                    'file': ('audio.webm', audio_bytes, 'audio/webm')
+                }
+                
+                response = await client.post(
+                    "https://api.groq.com/openai/v1/audio/transcriptions",
+                    headers={"Authorization": f"Bearer {rotator.current_key}"},
+                    data=data,
+                    files=files,
+                    timeout=30.0
+                )
+                
+                if response.status_code == 429 and attempt < 2:
+                    logger.warning("Whisper rate limit hit, rotating key")
+                    rotator.next_key()
+                    continue
+                    
+                response.raise_for_status()
+                result = response.json()
+                return {"transcript": result.get("text", "")}
+                
+            raise Exception("Max retries exceeded for transcription")
             
     except Exception as e:
         logger.error("Error transcribing audio", exc_info=True)
