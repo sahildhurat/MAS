@@ -204,7 +204,7 @@ export default function Home() {
     <>
       <Header />
       <main className="flex-grow pt-24 md:pt-32 px-margin-mobile md:px-margin-desktop md:pr-[400px] lg:pr-[440px] max-w-[1440px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-gutter">
-        <div id="explore" className="contents">
+        <div id="explore" className="col-span-full">
           <Hero destination={currentDestination} hasData={hasData} itineraryTitle={itineraryData?.title} itinerarySummary={itineraryData?.summary} />
         </div>
         
@@ -229,7 +229,7 @@ export default function Home() {
           <>
             {/* Accommodation Card */}
             {itineraryData?.accommodation && (
-              <div className="lg:col-span-12 glass-panel rounded-xl p-lg mb-2">
+              <div className="col-span-full glass-panel rounded-xl p-lg mb-2">
                 <div className="flex items-center gap-3 mb-3">
                   <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
                     <span className="material-symbols-outlined text-primary">hotel</span>
@@ -249,10 +249,10 @@ export default function Home() {
               </div>
             )}
 
-            <div id="itinerary" className="contents">
+            <div id="itinerary" className="col-span-full">
               <ItineraryCard days={itineraryDays} />
             </div>
-            <div id="budget" className="contents">
+            <div id="budget" className="col-span-full">
               <BudgetSummary
               totalAllocated={budgetTotal}
               totalEstimated={budgetEstimated}

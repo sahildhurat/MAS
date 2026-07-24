@@ -1,4 +1,5 @@
 from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
 from src.models.request import TravelRequest
 from pathlib import Path
@@ -11,8 +12,10 @@ class OrchestratorAgent:
     Phase 2+: Will also assemble itinerary and handle retries.
     """
     def __init__(self, prompt_path: str = "src/prompts/orchestrator.md"):
-        # Use Google Gemini for fast and reliable structured output
-        self.llm = ChatGoogleGenerativeAI(model=settings.gemini_model, temperature=0, api_key=settings.google_api_key)
+        # Use Groq for fast query parsing
+        self.llm_parse = ChatGroq(model=settings.groq_planner_model, temperature=0, api_key=settings.groq_api_key)
+        # Use Google Gemini for heavy lifting (itinerary assembly)
+        self.llm_assemble = ChatGoogleGenerativeAI(model=settings.gemini_model, temperature=0, api_key=settings.google_api_key)
         with open(prompt_path, "r", encoding="utf-8") as f:
             self.system_prompt = f.read()
 
@@ -22,7 +25,7 @@ class OrchestratorAgent:
             {"role": "system", "content": self.system_prompt},
             {"role": "user", "content": f"Raw Query: {raw_query}"}
         ]
-        llm_with_tool = self.llm.with_structured_output(TravelRequest)
+        llm_with_tool = self.llm_parse.with_structured_output(TravelRequest)
         result = await llm_with_tool.ainvoke(messages)
         # Ensure raw_query is set
         result.raw_query = raw_query
@@ -44,5 +47,5 @@ class OrchestratorAgent:
             {"role": "system", "content": prompt},
             {"role": "user", "content": f"Request: {request}\nDestination: {destination_report}\nLogistics: {logistics_plan}\nBudget: {budget_breakdown}"}
         ]
-        llm_with_tool = self.llm.with_structured_output(Itinerary)
+        llm_with_tool = self.llm_assemble.with_structured_output(Itinerary)
         return await llm_with_tool.ainvoke(messages)
