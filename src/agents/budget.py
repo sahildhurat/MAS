@@ -1,4 +1,4 @@
-from langchain_groq import ChatGroq
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 from src.models.request import TravelRequest
 from src.models.budget import BudgetBreakdown
@@ -8,7 +8,7 @@ from src.config import settings
 
 class BudgetAgent:
     def __init__(self, llm=None, prompt_path=None):
-        self.llm = llm or ChatGroq(model=settings.groq_planner_model, temperature=0, api_key=settings.groq_api_key)
+        self.llm = llm or ChatGoogleGenerativeAI(model=settings.gemini_model, temperature=0, api_key=settings.google_api_key)
         
         if not prompt_path:
             prompt_path = Path(__file__).parent.parent / "prompts" / "budget.md"
