@@ -45,7 +45,13 @@ class VoiceAgent:
         result = await self.llm.ainvoke(formatted_prompt)
         
         try:
-            parsed = json.loads(result.content)
+            # Strip markdown code blocks if the LLM adds them
+            import re
+            clean_content = result.content.strip()
+            clean_content = re.sub(r"^```(?:json)?", "", clean_content).strip()
+            clean_content = re.sub(r"```$", "", clean_content).strip()
+            
+            parsed = json.loads(clean_content)
             return VoiceResponse(
                 response=parsed.get("response", "I'm sorry, I couldn't understand that."),
                 trigger_planner=parsed.get("trigger_planner", False)
