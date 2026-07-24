@@ -39,9 +39,26 @@ class VoiceAgent:
             chat_history=history_str
         )
         
-        # We manually parse the JSON to avoid Langchain's tool calling wrappers
-        # which sometimes fail on Groq's smaller models
-        result = await self.llm.ainvoke(formatted_prompt)
+        # Retry with key rotation on rate-limit errors
+        for attempt in range(3):
+            try:
+                result = await self.llm.ainvoke(formatted_prompt)
+                break
+            except Exception as e:
+                err_str = str(e).lower()
+                if ("429" in err_str or "rate_limit" in err_str or "rate limit" in err_str) and attempt < 2:
+                    from src.utils.groq_rotator import get_rotator
+                    rotator = get_rotator()
+                    rotator.next_key()
+                    self.llm = rotator.get_llm(
+                        model=settings.groq_model,
+                        temperature=0.7,
+                    ).bind(response_format={"type": "json_object"})
+                    continue
+                return VoiceResponse(
+                    response="I'm having trouble processing that right now.",
+                    trigger_planner=False
+                )
         
         try:
             # Strip markdown code blocks if the LLM adds them
